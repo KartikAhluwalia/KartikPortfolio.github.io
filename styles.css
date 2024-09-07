@@ -510,3 +510,57 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background-color: #FFC700; /* Slightly darker yellow on hover */
 }
+
+
+#about {
+    padding: 50px 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.about-photo {
+    flex: 1;
+    text-align: center;
+}
+
+.about-photo img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-photo img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
