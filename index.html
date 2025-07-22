@@ -73,9 +73,6 @@
         .skill-icon {
             @apply flex flex-col items-center text-center p-2 transition-transform duration-300 hover:scale-110 w-24;
         }
-        .skill-icon img, .skill-icon svg {
-            @apply h-12 w-12 object-contain mb-2;
-        }
         .skill-icon span {
             @apply text-sm text-gray-300 mt-auto;
         }
@@ -253,39 +250,108 @@
                     <div class="mb-12">
                         <h3 class="text-2xl font-semibold text-white mb-6 text-center">Languages</h3>
                         <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
-                            <div class="skill-icon"><img src="python-icon.png" alt="Python" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"><span>Python</span></div>
-                            <div class="skill-icon"><img src="c++-icon.png" alt="C++" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=C++';"><span>C++</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=C" alt="C"><span>C</span></div>
-                            <div class="skill-icon"><img src="java-icon.png" alt="Java" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Java';"><span>Java</span></div>
-                            <div class="skill-icon"><img src="sql-icon.png" alt="SQL" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=SQL';"><span>SQL</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=JS" alt="JavaScript"><span>JavaScript</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=HTML" alt="HTML/CSS"><span>HTML/CSS</span></div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="python-icon.png" alt="Python" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"></div>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="c++-icon.png" alt="C++" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=C++';"></div>
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=C" alt="C" class="h-full w-full object-contain"></div>
+                                <span>C</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="java-icon.png" alt="Java" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Java';"></div>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="sql-icon.png" alt="SQL" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=SQL';"></div>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=JS" alt="JavaScript" class="h-full w-full object-contain"></div>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=HTML" alt="HTML/CSS" class="h-full w-full object-contain"></div>
+                                <span>HTML/CSS</span>
+                            </div>
                         </div>
                     </div>
                     <div class="mb-12">
                         <h3 class="text-2xl font-semibold text-white mb-6 text-center">Frameworks & Libraries</h3>
                         <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=React" alt="ReactJS"><span>ReactJS</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Node" alt="Node.js"><span>Node.js</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Ex" alt="Express.JS"><span>Express.JS</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=BS" alt="Bootstrap"><span>Bootstrap</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=TW" alt="Tailwind CSS"><span>Tailwind CSS</span></div>
-                            <div class="skill-icon"><img src="Tensor-icon.png" alt="TensorFlow" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=TF';"><span>TensorFlow</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=SKL" alt="Scikit-learn"><span>Scikit-learn</span></div>
-                            <div class="skill-icon"><img src="pandas.png" alt="Pandas" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Pa';"><span>Pandas</span></div>
-                            <div class="skill-icon"><img src="num-logo.png" alt="NumPy" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Np';"><span>NumPy</span></div>
-                            <div class="skill-icon"><img src="mat.png" alt="Matplotlib" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Mat';"><span>Matplotlib</span></div>
-                            <div class="skill-icon"><img src="seaborn.png" alt="Seaborn" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Sb';"><span>Seaborn</span></div>
+                             <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=React" alt="ReactJS" class="h-full w-full object-contain"></div>
+                                <span>ReactJS</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Node" alt="Node.js" class="h-full w-full object-contain"></div>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Ex" alt="Express.JS" class="h-full w-full object-contain"></div>
+                                <span>Express.JS</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=BS" alt="Bootstrap" class="h-full w-full object-contain"></div>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=TW" alt="Tailwind CSS" class="h-full w-full object-contain"></div>
+                                <span>Tailwind CSS</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="Tensor-icon.png" alt="TensorFlow" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=TF';"></div>
+                                <span>TensorFlow</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=SKL" alt="Scikit-learn" class="h-full w-full object-contain"></div>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="pandas.png" alt="Pandas" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Pa';"></div>
+                                <span>Pandas</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="num-logo.png" alt="NumPy" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Np';"></div>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="mat.png" alt="Matplotlib" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Mat';"></div>
+                                <span>Matplotlib</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="seaborn.png" alt="Seaborn" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Sb';"></div>
+                                <span>Seaborn</span>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <h3 class="text-2xl font-semibold text-white mb-6 text-center">Tools</h3>
                         <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
-                            <div class="skill-icon"><img src="git-icon.png" alt="Git" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"><span>Git</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=VS" alt="VS Code"><span>VS Code</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Jpy" alt="Jupyter"><span>Jupyter</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=WP" alt="WordPress"><span>WordPress</span></div>
-                            <div class="skill-icon"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=El" alt="Elementor"><span>Elementor</span></div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="git-icon.png" alt="Git" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"></div>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=VS" alt="VS Code" class="h-full w-full object-contain"></div>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=Jpy" alt="Jupyter" class="h-full w-full object-contain"></div>
+                                <span>Jupyter</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=WP" alt="WordPress" class="h-full w-full object-contain"></div>
+                                <span>WordPress</span>
+                            </div>
+                            <div class="skill-icon">
+                                <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=El" alt="Elementor" class="h-full w-full object-contain"></div>
+                                <span>Elementor</span>
+                            </div>
                         </div>
                     </div>
                 </div>
