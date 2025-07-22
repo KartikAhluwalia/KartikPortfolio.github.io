@@ -1,247 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Ahluwalia - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    
+    <title>Kartik Ahluwalia | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray */
+            color: #F3F4F6; /* Light Gray */
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .section-title {
+            @apply text-3xl font-bold text-cyan-400 mb-8 text-center;
+        }
+        .card {
+            @apply glass-effect rounded-xl p-6 transition-all duration-300 hover:border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/20;
+        }
+        .tag {
+            @apply inline-block bg-gray-700 text-gray-300 text-sm font-medium mr-2 mb-2 px-3 py-1 rounded-full;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="navbar-container">
-                <div class="menu-icon" onclick="toggleMenu()">
-                    <i class="fas fa-bars"></i>
-                </div>
-                
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                
-            </div>
-        </nav>        
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Kartik Ahluwalia</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
+                <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-300 hover:text-cyan-400">About</a>
+            <a href="#experience" class="block py-2 text-gray-300 hover:text-cyan-400">Experience</a>
+            <a href="#projects" class="block py-2 text-gray-300 hover:text-cyan-400">Projects</a>
+            <a href="#skills" class="block py-2 text-gray-300 hover:text-cyan-400">Skills</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-cyan-400">Contact</a>
+        </div>
     </header>
 
-    <section id="home" class="parallax">
-        <div class="content">
-            <h1>Kartik Ahluwalia</h1>
-            <p>Software Engineer | AI Enthusiast | Developer</p>
-            <a href="https://drive.google.com/file/d/1xZwaJArp1cUgHok1d8D_cNZNIKUb3Rgk/view?usp=sharing" target="_blank" class="resume-button">Download Resume</a>
-        </div>
-    </section>
-    
-    
-    
-    
+    <main class="container mx-auto px-6 pt-24">
 
-    <section id="about">
-        <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                    As a passionate enthusiast in machine learning and software development, I have dedicated my career to exploring the intersection of technology and innovation. I recently published a paper on the "Comparative Analysis of Various SMS Spam Detection Methods using Machine Learning," which was indexed in Scopus and presented at WCSE 2023, where I was honored with the Best Oral Presenter Award.
-
-                    
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                 <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-4">
+                    Kartik Ahluwalia
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-cyan-400 font-medium mb-6">
+                    Computer Science Engineer & Developer
+                </h2>
+                <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto md:mx-0">
+                    Aspiring software engineer with a passion for machine learning, web development, and creating innovative solutions to complex problems.
                 </p>
-                <p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://github.com/kartikahluwalia" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.578.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://leetcode.com/u/Kartik1304" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-1.374 1.374v18.75a1.374 1.374 0 0 0 1.374 1.374h7.125a1.374 1.374 0 0 0 1.374-1.374V1.374A1.374 1.374 0 0 0 20.608 0h-7.125zM15.45 18.225l-1.8-1.8 3.15-3.15-3.15-3.15 1.8-1.8 4.95 4.95-4.95 4.95zM3.375 24a1.374 1.374 0 0 1-1.374-1.374V3.874A1.374 1.374 0 0 1 3.375 2.5h7.125a1.374 1.374 0 0 1 1.374 1.374v3.375h-2.75V5.25h-5.75v13.5h5.75v-2.25h2.75v3.375a1.374 1.374 0 0 1-1.374 1.374H3.375z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-gray-800 border-4 border-cyan-400 shadow-lg shadow-cyan-500/30">
+                    <img src="https://placehold.co/400x400/1F2937/FFFFFF?text=KA" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/1F2937/FFFFFF?text=KA';"
+                         alt="Kartik Ahluwalia" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
 
-                    My commitment to technology extends beyond research; I was selected as a delegate for HPAIR 2024 and participated in the experienced student track for Stanford Code in Place 2024. Additionally, I have earned the Duke of Edinburgh Gold, Silver, and Bronze Medals, alongside a Certificate of Merit in the Tata Imagination Challenge 2023.
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="section-title">About Me</h2>
+            <div class="max-w-4xl mx-auto text-center text-gray-300 text-lg leading-relaxed">
+                <p>I am a B.Tech Computer Science student at Manipal Institute of Technology (CGPA: 8.79) with a strong foundation in programming, data structures, and algorithms. My expertise spans across Python, C++, Java, and JavaScript, with hands-on experience in frameworks like React, Node.js, and Express. I am passionate about leveraging technology to build scalable and efficient solutions, particularly in the fields of Machine Learning and Web Development. I thrive in collaborative environments and am always eager to learn and take on new challenges.</p>
+            </div>
+        </section>
 
-                </p>
-                <p>
-                    With a strong interest in software development and deep learning, I am continually exploring new ways to apply my skills and knowledge to solve complex problems and drive technological advancements.
-                </p>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="section-title">Experience</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-1">Trainee Engineer</h3>
+                    <p class="text-cyan-400 font-semibold mb-2">Amantya Technologies</p>
+                    <p class="text-sm text-gray-400 mb-4">Nov 2024 - Jan 2025 | Gurgaon, India</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Developed CNN-based anomaly detection for IoT device logs.</li>
+                        <li>Processed and analyzed over 500,000 sensor readings to enhance model robustness.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-1">SDE Intern - ML & Backend</h3>
+                    <p class="text-cyan-400 font-semibold mb-2">Xebia</p>
+                    <p class="text-sm text-gray-400 mb-4">June 2024 - July 2024 | Gurgaon, India</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Created an advanced customer segmentation algorithm.</li>
+                        <li>Reduced marketing costs by optimizing ad spend and targeting.</li>
+                    </ul>
+                </div>
+                 <div class="card md:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-1">WordPress Developer Intern</h3>
+                    <p class="text-cyan-400 font-semibold mb-2">Connect Link</p>
+                    <p class="text-sm text-gray-400 mb-4">Oct 2023 - Nov 2023 | Remote</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Spearheaded web development initiatives.</li>
+                        <li>Implemented strategic SEO optimizations to enhance site visibility.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="about-photo">
-                <img src="Personal_Photo.jpeg" alt="Kartik Ahluwalia">
-            </div>
-        </div>
-    </section>
-    
+        </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <img src="xebia-logo.png" alt="Xebia Logo" class="company-logo">
-            <h3>Xebia (SDE Intern)</h3>
-            <p>- Worked on developing models for evaluating financial transactions and loan approval.</p>
-            <p>- Utilized various Machine Learning and Deep Learning models (Tensorflow) to achieve accurate results.</p>
-        </div>
-        <div class="experience-item">
-            <img src="connect-link-logo.png" alt="Connect Link Logo" class="company-logo">
-            <h3>Connect Link (WordPress Developer Intern)</h3>
-            <p>- As a dynamic WordPress Developer Intern at Connect Link, I played a pivotal role in web development and SEO optimization, focusing on enhancing online presence and user experience.</p>
-            <p>- Utilized Elementor to craft visually stunning and user-friendly websites, bringing creativity and functionality seamlessly together.</p>
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-2">VibeVerse Chat</h3>
+                    <p class="text-gray-400 mb-4">A real-time chat platform with group messaging and collaboration features.</p>
+                    <div class="mb-4">
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Socket.IO</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-2">BitPredict</h3>
+                    <p class="text-gray-400 mb-4">A Bitcoin price forecasting tool using 10 time-series models, achieving a low MAE of 615.5.</p>
+                    <div class="mb-4">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-2">Breast Cancer Detection</h3>
+                    <p class="text-gray-400 mb-4">A transfer learning-based classifier achieving 94% accuracy and 91% F1-score.</p>
+                    <div class="mb-4">
+                        <span class="tag">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">Transfer Learning</span>
+                    </div>
+                </div>
+                <div class="card md:col-start-2 lg:col-start-auto">
+                    <h3 class="text-xl font-bold text-white mb-2">SMS Spam Detection Research</h3>
+                    <p class="text-gray-400 mb-4">Published a comparative study of spam classifiers, presented at WCSE 2023.</p>
+                    <div class="mb-4">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-learn</span>
+                        <span class="tag">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Dead Lift Rep Counter using Machine Learning</h3>
-                <p>Utilizes advanced machine learning algorithms to accurately detect individual deadlift repetitions from video footage in real time. Analyzes the form and posture of the user to ensure proper technique and reduce the risk of injury.</p>
-                <a href="https://github.com/KartikAhluwalia/Deadlift-Rep-using-Machine-Learning" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4">Languages</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">Java</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4">Frameworks</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">ReactJS</span><span class="tag">Node.js</span><span class="tag">Express.JS</span><span class="tag">Bootstrap</span><span class="tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-white mb-4">Libraries</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">TensorFlow</span><span class="tag">Scikit-learn</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-4">Tools</h3>
+                    <div class="flex flex-wrap">
+                        <span class="tag">Git</span><span class="tag">Jupyter</span><span class="tag">WordPress</span><span class="tag">VS Code</span><span class="tag">Elementor</span>
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <h3>BitPredict</h3>
-                <p>The project uses historical data of Bitcoin Prices to predict the price of bitcoin. This comes under Time Series forecasting. 10 different models have been used to predict the price of Bitcoin. These models have varying hyper parameters such as Window Size and Horizon to achieve the highest accuracy.</p>
-                <a href="https://github.com/KartikAhluwalia/" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="project">
-                <h3>Python Command Line Weather Tool</h3>
-                <p>The Weather Forecast Tool is a Python command-line application that provides users with up-to-date weather information for any city they specify for the current date. By leveraging APIs and the user's input, the tool fetches the current weather data and displays it in a user-friendly format.</p>
-                <a href="https://github.com/KartikAhluwalia/Python-Weather-Tool" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="project">
-                <h3>FoodVision</h3>
-                <p>This project involves creating a food image classification model using TensorFlow and Keras. The primary models used are convolutional neural networks (CNNs) with a focus on transfer learning. Specifically, the project employs pre-trained EfficientNet models to leverage their advanced feature extraction capabilities for classifying food images.</p>
-                <a href="https://github.com/KartikAhluwalia/" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="project">
-                <h3>Vibe Verse MERN Chat App</h3>
-                <p>VibeVerse is a dynamic online platform that brings people together through real-time chat and collaboration. Built with React.js for frontend, Node.js and Express.js for backend, and MongoDB for data storage, VibeVerse offers seamless communication in vibrant chat groups. With Socket.IO enabling real-time messaging.</p>
-                <a href="https://github.com/KartikAhluwalia/Vibe-Verse-MERN-Chat-App" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-            </div>
-            <div class="project">
-                <h3>Twitter Sentiment Analysis</h3>
-                <p>DThe "Twitter Sentiment Analysis with Machine Learning using Logistic Regression" project is a comprehensive exploration into the realm of sentiment analysis, leveraging a vast dataset of 1.6 million tweets sourced from Twitter. This endeavor is rooted in Python programming, where the intricacies of the language are employed for data preprocessing, feature extraction, and model implementation. </p>
-                <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" class="github-button">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-            </div>
-            <!-- Add more projects as needed -->
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="skills-content">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="c++-icon.png" alt="C++">
-                    </div>
-                    <p>C++</p>
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-3">Achievements</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>Stanford Code in Place Experienced Track (2024)</li>
+                        <li>Selected as HPAIR Asia Conference Delegate (2024)</li>
+                        <li>MassMutual India Scholarship - ISACA (2024)</li>
+                        <li>TATA Imagination Challenge National Semi-Finalist</li>
+                        <li>Best Oral Presenter WCSE 2023, Singapore</li>
+                        <li>Solved 300+ problems on LeetCode & GFG</li>
+                    </ul>
                 </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="python-icon.png" alt="Python">
-                    </div>
-                    <p>Python</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="java-icon.png" alt="Java">
-                    </div>
-                    <p>Java</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="git-icon.png" alt="Git">
-                    </div>
-                    <p>Git</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="research.png" alt="Research">
-                    </div>
-                    <p>Research</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="Tensor-icon.png" alt="TensorFlow">
-                    </div>
-                    <p>TensorFlow</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="num-logo.png" alt="Numpy">
-                    </div>
-                    <p>Numpy</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="pandas.png" alt="Pandas">
-                    </div>
-                    <p>Pandas</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="seaborn.png" alt="Seaborn">
-                    </div>
-                    <p>Seaborn</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="mat.png" alt="Matplotlib">
-                    </div>
-                    <p>Matplotlib</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="oracle.png" alt="Oracle">
-                    </div>
-                    <p>Oracle</p>
-                </div>
-                <div class="skill">
-                    <div class="skill-icon">
-                        <img src="sql-icon.png" alt="SQL">
-                    </div>
-                    <p>SQL</p>
+                <div class="card">
+                    <h3 class="text-xl font-bold text-white mb-3">Certifications</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2">
+                        <li>PWC Launchpad Cybersecurity</li>
+                        <li>Google Cybersecurity Professional Certificate</li>
+                        <li>Cisco CCNA: Introduction to Networks</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    
+        </section>
 
-    <section id="recommendations">
-        <h2>Recommendations</h2>
-        <div class="recommendation-item">
-            <p>"I am delighted to recommend Kartik Ahluwalia, who has completed a significant research project under my supervision. Kartik authored an insightful paper on the comparative analysis of spam detection using machine learning, demonstrating his deep understanding of the subject and his ability to conduct thorough research. Kartik's technical skills, coupled with his passion for machine learning, make him a valuable asset in any research or professional setting. I am confident that he will continue to excel and make meaningful contributions in his future endeavors. Throughout the project, Kartik displayed exceptional problem-solving abilities and a keen attention to detail. He was proactive in seeking feedback and made significant improvements based on constructive criticism, showing his commitment to excellence."</p>
-            <p align="center"> - Dr. Gururaj HL, Associate Professor, Senior Member ACM</p>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="text-lg text-gray-300 mb-4">I'm currently open to new opportunities. Feel free to reach out!</p>
+            <a href="mailto:kartikahluwalia2004@gmail.com" class="inline-block bg-cyan-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-cyan-600 transition-colors">
+                Say Hello
+            </a>
+            <p class="text-gray-400 mt-6">+91-9667269688</p>
+        </section>
 
-    <section id="contact">
-        <div class="contact-content">
-            <h2>Contact Me</h2>
-            <p>Feel free to connect with me through the following platforms:</p>
-            <div class="social-links">
-                <a href="https://x.com/KartikA1304" target="_blank">
-                    <img src="x_logo.jpg" alt="X">
-                </a>
-                <a href="https://www.instagram.com/kartikahluwalia2004" target="_blank">
-                    <img src="insta_logo.jpg" alt="Instagram">
-                </a>
-                <a href="https://github.com/kartikahluwalia" target="_blank">
-                    <img src="github-icon.png" alt="GitHub">
-                </a>
-                <a href="https://www.linkedin.com/in/kartikahluwalia2004" target="_blank">
-                    <img src="linkedin_logo.jpg" alt="LinkedIn">
-                </a>
-                <a href="mailto:kartikahluwalia2004@gmail.com">
-                    <img src="email_logo.jpg" alt="Email">
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-gray-500">
+        <p>&copy; 2024 Kartik Ahluwalia. Designed with passion.</p>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const navLinks = document.querySelectorAll('#mobile-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
