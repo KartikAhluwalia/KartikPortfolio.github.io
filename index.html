@@ -125,22 +125,25 @@
                     <p class="text-lg text-gray-400 mb-8 max-w-xl mx-auto md:mx-0">
                         Aspiring software engineer with a passion for machine learning, web development, and creating innovative solutions to complex problems.
                     </p>
-                    <div class="flex justify-center md:justify-start space-x-4">
-                        <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
-                            <img src="linkedin_logo.jpg" alt="LinkedIn" class="w-8 h-8 rounded-full">
+                    <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6">
+                        <a href="https://drive.google.com/file/d/1E0fzlXFcXzTVOXISDBwAE-X9zHxVqP9L/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-cyan-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors w-full md:w-auto">
+                            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z"/></svg>
+                            View Resume
                         </a>
-                        <a href="https://github.com/kartikahluwalia" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
-                            <img src="github_logo.jpg" alt="GitHub" class="w-8 h-8 rounded-full">
-                        </a>
-                        <a href="https://leetcode.com/u/Kartik1304" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
-                            <img src="https://placehold.co/100x100/1F2937/FFFFFF?text=LC" alt="LeetCode" class="w-8 h-8 rounded-full">
-                        </a>
-                        <a href="https://drive.google.com/file/d/1E0fzlXFcXzTVOXISDBwAE-X9zHxVqP9L/view?usp=sharing" target="_blank" rel="noopener noreferrer" title="View Resume" class="text-gray-400 hover:text-cyan-400 transition-colors">
-                            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z"/></svg>
-                        </a>
+                        <div class="flex justify-center md:justify-start space-x-4">
+                            <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
+                                <img src="linkedin_logo.jpg" alt="LinkedIn" class="w-8 h-8 rounded-full">
+                            </a>
+                            <a href="https://github.com/kartikahluwalia" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
+                                <img src="github_logo.jpg" alt="GitHub" class="w-8 h-8 rounded-full">
+                            </a>
+                            <a href="https://leetcode.com/u/Kartik1304" target="_blank" class="text-gray-400 hover:opacity-80 transition-opacity">
+                                <img src="https://placehold.co/100x100/1F2937/FFFFFF?text=LC" alt="LeetCode" class="w-8 h-8 rounded-full">
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
+                <div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-gray-800 border-4 border-cyan-400 shadow-lg shadow-cyan-500/30">
                         <img src="Personal_Photo.jpeg" 
                              onerror="this.onerror=null; this.src='https://placehold.co/400x400/1F2937/FFFFFF?text=KA';"
@@ -161,10 +164,15 @@
             <!-- Experience Section -->
             <section id="experience" class="py-20">
                 <h2 class="section-title">Experience</h2>
-                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="max-w-3xl mx-auto flex flex-col gap-8">
                     <div class="card">
-                        <h3 class="text-2xl font-bold text-white mb-1">Trainee Engineer</h3>
-                        <p class="text-cyan-400 font-semibold mb-2">Amantya Technologies</p>
+                         <div class="flex items-center mb-3">
+                            <img src="https://placehold.co/100x100/FFFFFF/1F2937?text=AT" alt="Amantya Technologies Logo" class="h-8 mr-4 bg-white rounded-md p-1">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white leading-tight">Trainee Engineer</h3>
+                                <p class="text-cyan-400 font-semibold">Amantya Technologies</p>
+                            </div>
+                        </div>
                         <p class="text-sm text-gray-400 mb-4">Nov 2024 - Jan 2025 | Gurgaon, India</p>
                         <ul class="list-disc list-inside text-gray-300 space-y-2">
                             <li>Developed CNN-based anomaly detection for IoT device logs.</li>
@@ -185,7 +193,7 @@
                             <li>Reduced marketing costs by optimizing ad spend and targeting.</li>
                         </ul>
                     </div>
-                     <div class="card md:col-span-2">
+                     <div class="card">
                         <div class="flex items-center mb-3">
                             <img src="connect-link-logo.png" alt="Connect Link Logo" class="h-8 mr-4 bg-white rounded-md p-1">
                             <div>
@@ -251,8 +259,8 @@
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="max-w-5xl mx-auto">
                     <div class="mb-12">
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Languages</h3>
-                        <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
+                        <h3 class="text-2xl font-semibold text-white mb-10 text-center">Languages</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-y-8 justify-items-center">
                             <div class="skill-icon">
                                 <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="python-icon.png" alt="Python" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"></div>
                                 <span>Python</span>
@@ -284,8 +292,8 @@
                         </div>
                     </div>
                     <div class="mb-12">
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Frameworks & Libraries</h3>
-                        <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
+                        <h3 class="text-2xl font-semibold text-white mb-10 text-center">Frameworks & Libraries</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-8 justify-items-center">
                              <div class="skill-icon">
                                 <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="https://placehold.co/100x100/1F2937/FFFFFF?text=React" alt="ReactJS" class="h-full w-full object-contain"></div>
                                 <span>ReactJS</span>
@@ -333,8 +341,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-semibold text-white mb-6 text-center">Tools</h3>
-                        <div class="flex flex-wrap items-start justify-center gap-x-4 gap-y-8">
+                        <h3 class="text-2xl font-semibold text-white mb-10 text-center">Tools</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-8 justify-items-center">
                             <div class="skill-icon">
                                 <div class="h-14 w-14 mb-2 flex items-center justify-center bg-gray-800/50 rounded-lg p-1 border border-gray-700"><img src="git-icon.png" alt="Git" class="h-full w-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"></div>
                                 <span>Git</span>
@@ -408,137 +416,139 @@
     <!-- Scripts for animations -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-        // JavaScript for mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        document.addEventListener('DOMContentLoaded', function() {
+            // JavaScript for mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const navLinks = document.querySelectorAll('#mobile-menu a, header nav a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
 
-        // Parallax effect for hero section
-        const heroContent = document.getElementById('hero-content');
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            // Move the hero content up at half the scroll speed
-            heroContent.style.transform = `translateY(${scrollPosition * 0.4}px)`;
-        });
+            // Close mobile menu when a link is clicked
+            const navLinks = document.querySelectorAll('#mobile-menu a, header nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
 
-        // particles.js configuration
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#ffffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    },
-                    "polygon": {
-                        "nb_sides": 5
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#ffffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
+            // Parallax effect for hero section
+            const heroContent = document.getElementById('hero-content');
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY;
+                // Move the hero content up at half the scroll speed
+                heroContent.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+            });
+
+            // particles.js configuration
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
                         }
                     },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
+                    "color": {
+                        "value": "#ffffff"
                     },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
+                    "shape": {
+                        "type": "circle",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        }
                     },
-                    "push": {
-                        "particles_nb": 4
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false,
+                        "anim": {
+                            "enable": false,
+                            "speed": 1,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
                     },
-                    "remove": {
-                        "particles_nb": 2
+                    "size": {
+                        "value": 3,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 40,
+                            "size_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 600,
+                            "rotateY": 1200
+                        }
                     }
-                }
-            },
-            "retina_detect": true
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 1
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 40,
+                            "duration": 2,
+                            "opacity": 8,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
+                },
+                "retina_detect": true
+            });
         });
     </script>
 
