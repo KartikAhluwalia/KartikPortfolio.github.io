@@ -12,8 +12,9 @@
         /* Custom styles for the Apple-inspired look */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #121212;
+            background-color: #121212; /* Restored background color */
             color: #F5F5F7;
+            overflow-x: hidden; /* Prevent horizontal scrollbar from animation */
         }
         .section {
             opacity: 0;
@@ -60,9 +61,66 @@
             background-color: #2c2c2e;
             border-color: #555;
         }
+
+        /* --- Shooting Star Animation --- */
+        .stars-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place behind all content */
+            transform: rotate(145deg); /* Angle the stars */
+        }
+
+        .star {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 2px;
+            background: linear-gradient(-45deg, rgba(0, 122, 255, 1), rgba(0,0,0,0));
+            border-radius: 999px;
+            filter: drop-shadow(0 0 6px rgba(105, 155, 255, 0.5));
+            animation: tail 3s ease-in-out infinite,
+                       shooting 3s ease-in-out infinite;
+        }
+
+        @keyframes tail {
+            0% { width: 0; }
+            30% { width: 100px; }
+            100% { width: 0; }
+        }
+
+        @keyframes shooting {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); }
+        }
+        
+        /* Stagger the animations for a natural look */
+        .star:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .star:nth-child(2) { top: 60%; left: 20%; animation-delay: 0.1s; }
+        .star:nth-child(3) { top: 40%; left: 70%; animation-delay: 0.2s; }
+        .star:nth-child(4) { top: 80%; left: 50%; animation-delay: 0.3s; }
+        .star:nth-child(5) { top: 10%; left: 90%; animation-delay: 0.4s; }
+        .star:nth-child(6) { top: 50%; left: 40%; animation-delay: 0.5s; }
+        .star:nth-child(7) { top: 70%; left: 80%; animation-delay: 0.6s; }
+        .star:nth-child(8) { top: 30%; left: 30%; animation-delay: 0.7s; }
+
     </style>
 </head>
 <body class="antialiased">
+
+    <!-- Shooting Stars Container -->
+    <div class="stars-container">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
 
     <!-- Header & Navigation -->
     <header id="header" class="glass-nav fixed top-0 left-0 right-0 z-50">
@@ -82,12 +140,12 @@
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-             <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
-             <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
-             <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
-             <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
-             <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
-             <a href="https://placehold.co/8.5x11/121212/f5f5f7?text=Resume.pdf" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
+              <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+              <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
+              <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
+              <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
+              <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+              <a href="https://placehold.co/8.5x11/121212/f5f5f7?text=Resume.pdf" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
         </div>
     </header>
 
@@ -108,8 +166,8 @@
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">About Me</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10 items-center">
                 <div class="md:col-span-1">
-                    <!-- Replace the src with the path to your Personal_Photo.png file -->
-                    <img src="Photo_Profile.jpeg" alt="Kartik Ahluwalia" class="rounded-full mx-auto">
+                    <!-- Replace with your photo URL -->
+                    <img src="https://placehold.co/400x400/1d1d1f/f5f5f7?text=KA" alt="Kartik Ahluwalia" class="rounded-full mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1d1d1f/f5f5f7?text=KA';">
                 </div>
                 <div class="md:col-span-2">
                     <p class="text-lg text-gray-300">
@@ -125,7 +183,8 @@
             <div class="max-w-2xl mx-auto">
                 <div class="card rounded-2xl p-8 flex items-center gap-8">
                     <div class="flex-shrink-0">
-                        <img src="manipal.png" alt="Manipal Institute of Technology Logo" class="h-20 w-20">
+                        <!-- Replace with your university logo URL -->
+                        <img src="https://placehold.co/80x80/ffffff/1d1d1f?text=MIT" alt="Manipal Institute of Technology Logo" class="h-20 w-20" onerror="this.onerror=null;this.src='https://placehold.co/80x80/ffffff/1d1d1f?text=MIT';">
                     </div>
                     <div>
                         <h3 class="text-2xl font-semibold">Manipal Institute of Technology</h3>
@@ -307,15 +366,15 @@
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Awards & Recognition</h2>
             <div class="max-w-5xl mx-auto">
                  <ul class="list-disc list-inside text-gray-400 space-y-3 text-lg columns-1 md:columns-2">
-                    <li>Best Oral Presenter, WCSE 2023</li>
-                    <li>MassMutual India Scholarship, ISACA</li>
-                    <li>Achiever Scholarship (Top 5% of batch)</li>
-                    <li>National Semi-Finalist, TATA Imagination Challenge</li>
-                    <li>Selected as HPAIR Asia Conference Delegate</li>
-                    <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
-                    <li>Solved 300+ problems on LeetCode & GFG</li>
-                    <li>Certificate of Appreciation, HackNite Hackathon</li>
-                </ul>
+                     <li>Best Oral Presenter, WCSE 2023</li>
+                     <li>MassMutual India Scholarship, ISACA</li>
+                     <li>Achiever Scholarship (Top 5% of batch)</li>
+                     <li>National Semi-Finalist, TATA Imagination Challenge</li>
+                     <li>Selected as HPAIR Asia Conference Delegate</li>
+                     <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
+                     <li>Solved 300+ problems on LeetCode & GFG</li>
+                     <li>Certificate of Appreciation, HackNite Hackathon</li>
+                 </ul>
             </div>
         </section>
 
@@ -358,14 +417,17 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
                 </a>
                 <a href="https://leetcode.com/u/Kartik1304/" target="_blank" class="text-gray-400 hover:text-white">
-                     <!-- Replace the src with the path to your leetcode.png file -->
-                     <img src="leetcode.png" alt="LeetCode" width="24" height="24">
+                     <!-- Using an inline SVG for the LeetCode icon for better performance and scalability -->
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.48 4.26a1.5 1.5 0 0 0-1.48-1.48l-2.76.28a1.5 1.5 0 0 0-1.2 1.76l3 9.74a1.5 1.5 0 0 0 1.73 1.2l.28-.02.28-.04a1.5 1.5 0 0 0 1.2-1.73l-1.05-3.4z"></path>
+                        <path d="M10.46 19.32a1.5 1.5 0 0 0-1.48-1.48l-2.76.28a1.5 1.5 0 0 0-1.2 1.76l3 9.74a1.5 1.5 0 0 0 1.73 1.2l.28-.02.28-.04a1.5 1.5 0 0 0 1.2-1.73l-1.05-3.4z" transform="translate(-1.05 -5.58)"></path>
+                    </svg>
                 </a>
             </div>
             <p class="text-gray-500 text-sm">&copy; 2025 Kartik Ahluwalia. All Rights Reserved.</p>
         </div>
     </footer>
-
+    
     <script>
         // JavaScript for scroll animations and mobile menu
         document.addEventListener('DOMContentLoaded', function() {
