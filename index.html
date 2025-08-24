@@ -3,813 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Ahluwalia | Portfolio</title>
+    <title>Kartik Ahluwalia | Personal Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles for the Apple-inspired look */
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
-            color: #F3F4F6;
-            overflow-x: hidden;
+            background-color: #121212;
+            color: #F5F5F7;
         }
-        
-        /* Enhanced particle background */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            background: radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
-        }
-
-        .content-wrapper {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Modern glass morphism effect */
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-
-        /* Enhanced section titles */
-        .section-title {
-            @apply text-6xl md:text-8xl font-bold mb-32 text-center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-        }
-
-        /* Modern card design */
-        .card {
-            @apply rounded-2xl p-8 transition-all duration-500;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
-        }
-
-        /* Enhanced project cards */
-        .project-card {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        /* Enhanced tags */
-        .tag {
-            @apply inline-block text-sm font-medium mr-3 mb-3 px-4 py-2 rounded-full transition-all duration-300;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            color: #e2e8f0;
-        }
-
-        .tag:hover {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);
-            transform: scale(1.05);
-        }
-
-        /* Enhanced project cards */
-        .project-card {
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            overflow: hidden;
-            border-radius: 1.5rem;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.8) 100%);
-            z-index: 1;
-            border-radius: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover::before {
-            background: linear-gradient(135deg, rgba(15, 15, 35, 0.7) 0%, rgba(26, 26, 46, 0.6) 100%);
-        }
-
-        .project-card > * {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Enhanced skill icons */
-        .skill-icon {
-            @apply flex flex-col items-center text-center p-6 transition-all duration-500 hover:scale-110 w-32;
-        }
-
-        .skill-icon .icon-container {
-            @apply h-20 w-20 mb-4 flex items-center justify-center rounded-2xl p-4 transition-all duration-300;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .skill-icon:hover .icon-container {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
-            border-color: rgba(102, 126, 234, 0.5);
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
-        }
-
-        .skill-icon span {
-            @apply text-base text-gray-300 mt-3 font-semibold;
-        }
-
-        /* Enhanced hero section */
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-        }
-
-        /* Modern button styles */
-        .btn-primary {
-            @apply inline-flex items-center justify-center font-bold px-8 py-4 rounded-xl transition-all duration-300;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.6);
-        }
-
-        /* Enhanced profile image */
-        .profile-image {
-            @apply rounded-full overflow-hidden border-4 shadow-2xl;
-            border: 4px solid transparent;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Smooth scroll animations */
-        .fade-in {
+        .section {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-
-        .fade-in.visible {
+        .section.visible {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Enhanced navigation */
-        .nav-link {
-            @apply relative text-gray-300 hover:text-white transition-colors duration-300;
+        .glass-nav {
+            background-color: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s ease;
+        .card {
+            background-color: #1D1D1F;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .nav-link:hover::after {
-            width: 100%;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
-
-        /* Enhanced mobile menu */
-        .mobile-menu {
-            background: rgba(15, 15, 35, 0.95);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .skill-tag {
+             background-color: rgba(0, 122, 255, 0.1);
+             color: #007AFF;
+             border: 1px solid rgba(0, 122, 255, 0.2);
         }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .btn-primary {
+            background-color: #007AFF;
+            color: white;
+            transition: background-color 0.3s ease;
         }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
+        .btn-primary:hover {
+            background-color: #0056b3;
         }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 4px;
+        .btn-secondary {
+            background-color: #1D1D1F;
+            border: 1px solid #333;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+        .btn-secondary:hover {
+            background-color: #2c2c2e;
+            border-color: #555;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <div id="particles-js"></div>
+    <!-- Header & Navigation -->
+    <header id="header" class="glass-nav fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight">Kartik Ahluwalia</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a>
+                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
+                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            </nav>
+            <a href="https://placehold.co/8.5x11/121212/f5f5f7?text=Resume.pdf" target="_blank" class="hidden md:inline-block px-4 py-2 rounded-lg btn-secondary">View Resume</a>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
+             <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
+             <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
+             <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+             <a href="https://placehold.co/8.5x11/121212/f5f5f7?text=Resume.pdf" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
+        </div>
+    </header>
 
-    <div class="content-wrapper">
-        <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-white hover:text-cyan-400 transition-colors">Kartik Ahluwalia</a>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#achievements" class="nav-link">Achievements</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </nav>
-                <button id="mobile-menu-button" class="md:hidden text-white hover:text-cyan-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+    <main class="container mx-auto px-6 pt-24 md:pt-32">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center section">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4">Kartik Ahluwalia</h1>
+            <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-400 mb-8">Full-Stack Developer & ML Enthusiast</h2>
+            <p class="max-w-3xl text-lg md:text-xl text-gray-300 mb-10">
+                A results-oriented Computer Science undergraduate with hands-on experience in full-stack web development and machine learning, focused on delivering robust software and data-driven solutions.
+            </p>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="px-6 py-3 rounded-lg btn-primary font-semibold">Get in Touch</a>
+                <a href="https://github.com/Kartik1304" target="_blank" class="px-6 py-3 rounded-lg btn-secondary font-semibold">View GitHub</a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mobile-menu px-6 pb-4">
-                <a href="#about" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors border-b border-gray-700">About</a>
-                <a href="#experience" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors border-b border-gray-700">Experience</a>
-                <a href="#projects" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors border-b border-gray-700">Projects</a>
-                <a href="#skills" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors border-b border-gray-700">Skills</a>
-                <a href="#achievements" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors border-b border-gray-700">Achievements</a>
-                <a href="#contact" class="block py-3 text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Experience</h2>
+            <div class="max-w-4xl mx-auto space-y-12 relative border-l-2 border-gray-700 pl-8">
+                <!-- Timeline Item 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
+                    <p class="text-sm text-gray-400 mb-1">Nov 2024 – Jan 2025</p>
+                    <h3 class="text-2xl font-semibold">Trainee Engineer</h3>
+                    <p class="text-lg text-gray-300 mb-2">Amantya Technologies</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Architected a full-stack job board using Next.js, JavaScript, and Prisma ORM.</li>
+                        <li>Integrated NextAuth.js for secure GitHub OAuth and full CRUD functionality.</li>
+                    </ul>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
+                    <p class="text-sm text-gray-400 mb-1">June 2024 – July 2024</p>
+                    <h3 class="text-2xl font-semibold">Intern</h3>
+                    <p class="text-lg text-gray-300 mb-2">Xebia</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Developed customer segmentation models using Scikit-learn, improving marketing accuracy by 30%.</li>
+                        <li>Integrated ML models into client personalization workflows using Python.</li>
+                    </ul>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
+                    <p class="text-sm text-gray-400 mb-1">Oct 2023 – Nov 2023</p>
+                    <h3 class="text-2xl font-semibold">WordPress Developer Intern</h3>
+                    <p class="text-lg text-gray-300 mb-2">Connect Link</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Enhanced site SEO and performance via optimized plugins, boosting load speed by 45%.</li>
+                    </ul>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <main class="container mx-auto px-6 pt-24">
-
-            <section id="hero" class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left hero-gradient rounded-3xl my-8">
-                <div id="hero-content" class="md:w-1/2 mb-10 md:mb-0 fade-in">
-                         <h1 class="text-6xl md:text-8xl font-bold text-white leading-tight mb-6">
-                            Kartik Ahluwalia
-                        </h1>
-                        <h2 class="text-3xl md:text-4xl text-cyan-400 font-medium mb-8">
-                            Full-Stack Developer & Machine Learning Engineer
-                        </h2>
-                        <p class="text-xl text-gray-300 mb-10 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                            A results-oriented Computer Science undergraduate with hands-on experience in full-stack web development and machine learning. Proven ability to deliver data-driven solutions and develop robust software.
-                        </p>
-                        <div class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6">
-                            <a href="https://drive.google.com/file/d/1FRkct4igC5J7SxqJe9YixLKyEAsbB5PH/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary text-white">
-                                <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM18 20H6V4H13V9H18V20Z"/></svg>
-                                View Resume
-                            </a>
-                            <div class="flex justify-center md:justify-start space-x-6">
-                                <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110">
-                                    <img src="linkedin_logo.jpg" alt="LinkedIn" class="w-10 h-10 rounded-full">
-                                </a>
-                                <a href="https://github.com/kartikahluwalia" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110">
-                                    <img src="github_logo.jpg" alt="GitHub" class="w-10 h-10 rounded-full">
-                                </a>
-                                <a href="https://leetcode.com/u/Kartik1304" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110">
-                                    <img src="leetcode.png" alt="LeetCode" class="w-10 h-10 rounded-full">
-                                </a>
-                            </div>
-                        </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center mt-10 md:mt-0 fade-in">
-                    <div class="profile-image w-72 h-72 md:w-96 md:h-96">
-                        <img src="Personal_Photo.png" 
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/1F2937/FFFFFF?text=KA';"
-                             alt="Kartik Ahluwalia" 
-                             class="w-full h-full object-cover">
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Selected Projects</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="card rounded-2xl p-6 flex flex-col">
+                    <h3 class="text-2xl font-semibold mb-2">VibeVerse Chat</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">A real-time group chat application built with the MERN stack and Socket.IO for WebSocket communication.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">React</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Node.js</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">MongoDB</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Socket.IO</span>
+                    </div>
+                    <div class="mt-auto">
+                        <a href="#" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
                     </div>
                 </div>
-            </section>
-
-            <section id="about" class="py-40 fade-in">
-                <h2 class="section-title">About Me</h2>
-                <div class="max-w-6xl mx-auto text-center text-gray-300 text-2xl leading-relaxed mt-20">
-                    <p class="mb-10">I am a final-year B.Tech Computer Science student at Manipal Institute of Technology (CGPA: 8.79), specializing in full-stack development and machine learning.</p>
-                    <p class="mb-10">My experience includes architecting web applications with Next.js and the MERN stack, as well as developing and deploying ML models for customer segmentation and price prediction.</p>
-                    <p>I am passionate about building robust, data-driven software and thrive in collaborative environments where I can tackle complex challenges.</p>
+                <!-- Project Card 2 -->
+                <div class="card rounded-2xl p-6 flex flex-col">
+                    <h3 class="text-2xl font-semibold mb-2">Bit Predict</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">Engineered deep learning models (LSTM, Conv1D) with TensorFlow and Keras to predict Bitcoin prices, achieving a MAE of 615.5.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">TensorFlow</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Keras</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                    </div>
+                     <div class="mt-auto">
+                        <a href="#" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
+                    </div>
                 </div>
-            </section>
+                <!-- Project Card 3 -->
+                <div class="card rounded-2xl p-6 flex flex-col">
+                    <h3 class="text-2xl font-semibold mb-2">SMS Spam Detection</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">Benchmarked ML classifiers on 5k SMS messages, achieving 98% F1-score. Published findings at WCSE 2023.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Scikit-learn</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">NLP</span>
+                    </div>
+                     <div class="mt-auto">
+                        <a href="#" class="font-semibold text-blue-500 hover:underline">View Publication &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="card rounded-2xl p-6 flex flex-col">
+                    <h3 class="text-2xl font-semibold mb-2">Twitter Sentiment Analysis</h3>
+                    <p class="text-gray-400 mb-4 flex-grow">Developed a machine learning model to classify the sentiment of tweets as positive, negative, or neutral using Natural Language Processing.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Scikit-learn</span>
+                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">NLP</span>
+                    </div>
+                     <div class="mt-auto">
+                        <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" class="font-semibold text-blue-500 hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <section id="experience" class="py-40 fade-in">
-                <h2 class="section-title">Experience</h2>
-                <div class="max-w-6xl mx-auto flex flex-col gap-16 mt-20">
-                    <div class="card">
-                         <div class="flex items-center mb-6">
-                            <img src="amantya.jpeg" alt="Amantya Technologies Logo" class="h-12 mr-6 bg-white rounded-xl p-2">
-                            <div>
-                                <h3 class="text-3xl font-bold text-white leading-tight">Trainee Engineer</h3>
-                                <p class="text-cyan-400 font-semibold text-lg">Amantya Technologies</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-6">Nov 2024 - Jan 2025 | Gurgaon, India</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
-                            <li>Architected a full-stack job board using Next.js, JavaScript, and Prisma ORM, creating a robust PostgreSQL backend via API Routes and a responsive Tailwind CSS frontend.</li>
-                            <li>Integrated NextAuth.js for secure GitHub OAuth, enabling protected routes and full CRUD functionality for user-managed job postings.</li>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">My Tech Stack</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Languages</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
                         </ul>
-                    </div>
-                    <div class="card">
-                         <div class="flex items-center mb-6">
-                            <img src="xebia-logo.png" alt="Xebia Logo" class="h-12 mr-6 bg-white rounded-xl p-2">
-                            <div>
-                                <h3 class="text-3xl font-bold text-white leading-tight">Intern</h3>
-                                <p class="text-cyan-400 font-semibold text-lg">Xebia</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-6">June 2024 - July 2024 | Gurgaon, India</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
-                            <li>Developed customer segmentation models using Scikit-learn and K-Means, improving marketing campaign targeting accuracy by 30%.</li>
-                            <li>Integrated ML models into client personalization workflows using Python, enhancing data-driven decision-making.</li>
-                        </ul>
-                    </div>
-                     <div class="card">
-                        <div class="flex items-center mb-6">
-                            <img src="connect-link-logo.png" alt="Connect Link Logo" class="h-12 mr-6 bg-white rounded-xl p-2">
-                            <div>
-                                <h3 class="text-3xl font-bold text-white leading-tight">WordPress Developer Intern</h3>
-                                <p class="text-cyan-400 font-semibold text-lg">Connect Link</p>
-                            </div>
-                        </div>
-                        <p class="text-sm text-gray-400 mb-6">Oct 2023 - Nov 2023 | Remote</p>
-                        <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
-                            <li>Enhanced site SEO and performance via optimized plugins, boosting load speed by 45%.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="py-40 fade-in">
-                <h2 class="section-title">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-20">
-                    <div class="card project-card" style="background-image: url('projects-bg.jpg');">
-                        <h3 class="text-3xl font-bold text-white mb-4">VibeVerse Chat</h3>
-                        <p class="text-gray-300 mb-6 text-lg">Developed a real-time group chat application using the MERN stack and Socket.IO for WebSocket communication.</p>
-                        <div class="mb-4">
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Express.js</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Socket.IO</span>
-                        </div>
-                    </div>
-                    <div class="card project-card" style="background-image: url('projects-bg.jpg');">
-                        <h3 class="text-3xl font-bold text-white mb-4">BitPredict</h3>
-                        <p class="text-gray-300 mb-6 text-lg">Engineered deep learning models to predict Bitcoin prices, achieving a Mean Absolute Error (MAE) of 615.5.</p>
-                        <div class="mb-4">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">Keras</span>
-                            <span class="tag">LSTM</span>
-                        </div>
-                    </div>
-                    <div class="card project-card" style="background-image: url('research.png');">
-                        <h3 class="text-3xl font-bold text-white mb-4">SMS Spam Detection Study</h3>
-                        <p class="text-gray-300 mb-6 text-lg">Benchmarked ML classifiers on 5k SMS messages; published findings at WCSE 2023 after achieving 98% F1-score.</p>
-                        <div class="mb-4">
-                            <span class="tag">Python</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Pandas</span>
-                            <span class="tag">NLP</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="py-40 fade-in">
-                <h2 class="section-title">Technical Skills</h2>
-                <div class="max-w-7xl mx-auto mt-20">
-                    <div class="mb-24">
-                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Languages</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-y-16 justify-items-center">
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="python-icon.png" alt="Python" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"></div>
-                                <span>Python</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="c++-icon.png" alt="C++" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=C++';"></div>
-                                <span>C++</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="java-icon.png" alt="Java" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Java';"></div>
-                                <span>Java</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="js.png" alt="JavaScript" class="h-12 w-12 object-contain"></div>
-                                <span>JavaScript</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="sql-icon.png" alt="SQL" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=SQL';"></div>
-                                <span>SQL</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="htmlcss.jpg" alt="HTML/CSS" class="h-12 w-12 object-contain"></div>
-                                <span>HTML/CSS</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mb-24">
-                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Web Development</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-16 justify-items-center">
-                               <div class="skill-icon">
-                                <div class="icon-container"><img src="react.svg" alt="React" class="h-12 w-12 object-contain"></div>
-                                <span>React</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="nextjs-icon.png" alt="Next.js" class="h-12 w-12 object-contain" style="filter: invert(1);"></div>
-                                <span>Next.js</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="node.svg" alt="Node.js" class="h-12 w-12 object-contain"></div>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="express.png" alt="Express.js" class="h-12 w-12 object-contain" style="filter: invert(1);"></div>
-                                <span>Express.js</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="tailwind.png" alt="Tailwind CSS" class="h-12 w-12 object-contain"></div>
-                                <span>Tailwind CSS</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="bootstrap.png" alt="Bootstrap" class="h-12 w-12 object-contain"></div>
-                                <span>Bootstrap</span>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="mb-24">
-                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Machine Learning</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-16 justify-items-center">
-                               <div class="skill-icon">
-                                <div class="icon-container"><img src="Tensor-icon.png" alt="TensorFlow" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=TF';"></div>
-                                <span>TensorFlow</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="scikit.png" alt="Scikit-learn" class="h-12 w-12 object-contain"></div>
-                                <span>Scikit-learn</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="pandas.png" alt="Pandas" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Pa';"></div>
-                                <span>Pandas</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="num-logo.png" alt="NumPy" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Np';"></div>
-                                <span>NumPy</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="mat.png" alt="Matplotlib" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Mat';"></div>
-                                <span>Matplotlib</span>
-                            </div>
-                        </div>
                     </div>
                     <div>
-                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Databases & Tools</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-16 justify-items-center">
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="mongodb-icon.png" alt="MongoDB" class="h-12 w-12 object-contain"></div>
-                                <span>MongoDB</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="postgresql-icon.png" alt="PostgreSQL" class="h-12 w-12 object-contain"></div>
-                                <span>PostgreSQL</span>
-                            </div>
-                             <div class="skill-icon">
-                                <div class="icon-container"><img src="oracle-icon.png" alt="Oracle" class="h-12 w-12 object-contain"></div>
-                                <span>Oracle</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="git-icon.png" alt="Git" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"></div>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="docker-icon.png" alt="Docker" class="h-12 w-12 object-contain"></div>
-                                <span>Docker</span>
-                            </div>
-                            <div class="skill-icon">
-                                <div class="icon-container"><img src="vs.png" alt="VS Code" class="h-12 w-12 object-contain"></div>
-                                <span>VS Code</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="achievements" class="py-40 fade-in">
-                <h2 class="section-title">Achievements & Leadership</h2>
-                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
-                    <div class="card">
-                        <h3 class="text-3xl font-bold text-white mb-6">Leadership & Awards</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
-                            <li><strong>Vice Chair</strong> – IEEE CS Student Chapter (2023-2024)</li>
-                            <li><strong>R&D Head</strong> – CyberSpace Club (2023-2024)</li>
-                            <li><strong>MassMutual India Scholarship</strong> – ISACA (2024)</li>
-                            <li><strong>Achiever Scholarship</strong> for Top 5% in batch – MIT (2024)</li>
-                            <li><strong>National Semi-Finalist</strong> – TATA Imagination Challenge (2024)</li>
-                            <li><strong>Best Oral Presenter</strong> – WCSE 2023, Singapore</li>
+                        <h3 class="text-xl font-semibold mb-4">Web Development</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>React / Next.js</li>
+                            <li>Node.js / Express.js</li>
+                            <li>Tailwind CSS</li>
+                            <li>HTML/CSS</li>
                         </ul>
                     </div>
-                    <div class="card">
-                        <h3 class="text-3xl font-bold text-white mb-6">Certifications & Recognition</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
-                            <li>Solved 300+ problems on LeetCode & GFG</li>
-                            <li>Stanford Code in Place – Experienced Track (2024)</li>
-                            <li>Google Cybersecurity Professional Certificate</li>
-                            <li>Cisco CCNA: Introduction to Networks</li>
-                            <li>PWC Launchpad Cyber Risk & Regulatory</li>
-                            <li>HPAIR Asia Conference Delegate (2024)</li>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>TensorFlow</li>
+                            <li>Scikit-learn</li>
+                            <li>Pandas / NumPy</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Databases & Tools</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li>MongoDB</li>
+                            <li>PostgreSQL</li>
+                            <li>Git / Docker</li>
+                            <li>VS Code</li>
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <section id="contact" class="py-40 fade-in">
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="max-w-7xl mx-auto mt-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div class="space-y-8">
-                            <div class="card">
-                                <h3 class="text-3xl font-bold text-white mb-6">Ready to Collaborate?</h3>
-                                <p class="text-xl text-gray-300 mb-8 leading-relaxed">
-                                    I'm actively seeking new opportunities in full-stack development and machine learning. Whether you have a project in mind or just want to chat about technology, I'd love to hear from you!
-                                </p>
-                                <div class="space-y-6">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <p class="text-white font-semibold">Email</p>
-                                            <a href="mailto:kartikahluwalia2004@gmail.com" class="text-cyan-400 hover:text-cyan-300 transition-colors">kartikahluwalia2004@gmail.com</a>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <p class="text-white font-semibold">Phone</p>
-                                            <a href="tel:+919667269688" class="text-cyan-400 hover:text-cyan-300 transition-colors">+91 9667269688</a>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <p class="text-white font-semibold">Location</p>
-                                            <p class="text-gray-300">Gurgaon, India</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <h3 class="text-3xl font-bold text-white mb-6">Send a Message</h3>
-                            <form id="contactForm" class="space-y-6">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label class="block text-gray-300 text-sm font-medium mb-2">Name</label>
-                                        <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="Your name">
-                                    </div>
-                                    <div>
-                                        <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
-                                        <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="your@email.com">
-                                    </div>
-                                </div>
-                                <div>
-                                    <label class="block text-gray-300 text-sm font-medium mb-2">Subject</label>
-                                    <input type="text" name="subject" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="What's this about?">
-                                </div>
-                                <div>
-                                    <label class="block text-gray-300 text-sm font-medium mb-2">Message</label>
-                                    <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none" placeholder="Tell me about your project or opportunity..."></textarea>
-                                </div>
-                                <button type="submit" class="w-full btn-primary text-white text-lg py-4">
-                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                                    </svg>
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="mt-16 text-center">
-                        <h3 class="text-2xl font-bold text-white mb-8">Connect on Social Media</h3>
-                        <div class="flex justify-center space-x-8">
-                            <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="group">
-                                <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-500/25">
-                                    <img src="linkedin_logo.jpg" alt="LinkedIn" class="w-10 h-10 rounded-full">
-                                </div>
-                                <p class="text-gray-300 mt-2 text-sm font-medium">LinkedIn</p>
-                            </a>
-                            <a href="https://github.com/kartikahluwalia" target="_blank" class="group">
-                                <div class="w-16 h-16 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-gray-500/25">
-                                    <img src="github_logo.jpg" alt="GitHub" class="w-10 h-10 rounded-full">
-                                </div>
-                                <p class="text-gray-300 mt-2 text-sm font-medium">GitHub</p>
-                            </a>
-                            <a href="https://leetcode.com/u/Kartik1304" target="_blank" class="group">
-                                <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-orange-500/25">
-                                    <img src="leetcode.png" alt="LeetCode" class="w-10 h-10 rounded-full">
-                                </div>
-                                <p class="text-gray-300 mt-2 text-sm font-medium">LeetCode</p>
-                            </a>
-                        </div>
-                    </div>
+            </div>
+        </section>
+        
+        <!-- Leadership Section -->
+        <section id="leadership" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Leadership</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">Vice Chair</h3>
+                    <p class="text-gray-400">IEEE CS Student Chapter</p>
+                    <p class="text-sm text-gray-500 mt-1">2023-2024</p>
                 </div>
-            </section>
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">R&D Head</h3>
+                    <p class="text-gray-400">CyberSpace Club</p>
+                    <p class="text-sm text-gray-500 mt-1">2023-2024</p>
+                </div>
+                <div class="card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">Executive Member</h3>
+                    <p class="text-gray-400">ACM Chapter</p>
+                    <p class="text-sm text-gray-500 mt-1">2022-2023</p>
+                </div>
+            </div>
+        </section>
 
-        </main>
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Awards & Recognition</h2>
+            <div class="max-w-5xl mx-auto">
+                 <ul class="list-disc list-inside text-gray-400 space-y-3 text-lg columns-1 md:columns-2">
+                    <li>Best Oral Presenter, WCSE 2023</li>
+                    <li>MassMutual India Scholarship, ISACA</li>
+                    <li>Achiever Scholarship (Top 5% of batch)</li>
+                    <li>National Semi-Finalist, TATA Imagination Challenge</li>
+                    <li>Selected as HPAIR Asia Conference Delegate</li>
+                    <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
+                    <li>Solved 300+ problems on LeetCode & GFG</li>
+                    <li>Certificate of Appreciation, HackNite Hackathon</li>
+                </ul>
+            </div>
+        </section>
 
-        <footer class="py-12 text-center text-gray-500 glass-effect mt-20">
-            <p class="text-lg">&copy; 2025 Kartik Ahluwalia. Designed with passion.</p>
-        </footer>
-    </div>
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 section">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Certifications</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+                <a href="#" target="_blank" class="block card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">Google Cybersecurity</h3>
+                    <p class="text-gray-400 text-sm">Professional Certificate</p>
+                </a>
+                <a href="#" target="_blank" class="block card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">Cisco CCNA</h3>
+                    <p class="text-gray-400 text-sm">Introduction to Networks</p>
+                </a>
+                <a href="#" target="_blank" class="block card rounded-2xl p-6">
+                    <h3 class="text-xl font-semibold">PWC Launchpad</h3>
+                    <p class="text-gray-400 text-sm">Cyber Risk & Regulatory</p>
+                </a>
+            </div>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="pt-20 pb-10 bg-[#1D1D1F] section">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4 tracking-tight">Let's Connect</h2>
+            <p class="max-w-2xl mx-auto text-gray-400 mb-8">
+                I'm currently seeking new opportunities and am open to collaborations. If you have a project in mind or just want to chat, feel free to reach out.
+            </p>
+            <a href="mailto:kartikahluwalia2004@gmail.com" class="inline-block text-2xl font-semibold text-blue-500 hover:underline mb-8">
+                kartikahluwalia2004@gmail.com
+            </a>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://github.com/Kartik1304" target="_blank" class="text-gray-400 hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                </a>
+                <a href="https://leetcode.com/Kartik1304" target="_blank" class="text-gray-400 hover:text-white">
+                     <!-- Replace the src with the path to your leetcode.png file -->
+                     <img src="https://placehold.co/24x24/121212/FFFFFF?text=LC" alt="LeetCode" width="24" height="24">
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Kartik Ahluwalia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script>
+        // JavaScript for scroll animations and mobile menu
         document.addEventListener('DOMContentLoaded', function() {
-            // Enhanced mobile menu toggle
+
+            // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // Close mobile menu when a link is clicked
-            const navLinks = document.querySelectorAll('#mobile-menu a, header nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
-            });
-
-            // Enhanced parallax effect for hero section
-            const heroContent = document.getElementById('hero-content');
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY;
-                heroContent.style.transform = `translateY(${scrollPosition * 0.3}px)`;
-            });
-
-            // Intersection Observer for fade-in animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
+            // Intersection Observer for section animations
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
-
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
+            }, {
+                threshold: 0.1
             });
 
-            // Contact form functionality
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
                     e.preventDefault();
                     
-                    const formData = new FormData(contactForm);
-                    const name = formData.get('name');
-                    const email = formData.get('email');
-                    const subject = formData.get('subject');
-                    const message = formData.get('message');
-                    
-                    // Create mailto link
-                    const mailtoLink = `mailto:kartikahluwalia2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-                    
-                    // Open default email client
-                    window.location.href = mailtoLink;
-                    
-                    // Show success message
-                    alert('Thank you for your message! Your default email client should open with the message pre-filled.');
-                    
-                    // Reset form
-                    contactForm.reset();
-                });
-            }
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
 
-            // Enhanced particles.js configuration
-            particlesJS('particles-js', {
-                "particles": {
-                    "number": {
-                        "value": 100,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
+                    if (targetElement) {
+                        // Close mobile menu on click
+                        if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
                         }
-                    },
-                    "color": {
-                        "value": ["#667eea", "#764ba2", "#f093fb"]
-                    },
-                    "shape": {
-                        "type": "circle",
-                    },
-                    "opacity": {
-                        "value": 0.6,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 1,
-                            "opacity_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true,
-                        "anim": {
-                            "enable": true,
-                            "speed": 2,
-                            "size_min": 0.1,
-                            "sync": false
-                        }
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#667eea",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 3,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false,
+                        
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "repulse"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "repulse": {
-                            "distance": 100,
-                            "duration": 0.4
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                    }
-                },
-                "retina_detect": true
+                });
             });
         });
     </script>
-
 </body>
 </html>
