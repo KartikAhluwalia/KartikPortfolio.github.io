@@ -45,24 +45,14 @@
 
         /* Enhanced section titles */
         .section-title {
-            @apply text-4xl md:text-5xl font-bold mb-12 text-center;
+            @apply text-6xl md:text-8xl font-bold mb-32 text-center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 2px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
         /* Modern card design */
@@ -78,6 +68,19 @@
             transform: translateY(-8px);
             border-color: rgba(102, 126, 234, 0.5);
             box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Enhanced project cards */
+        .project-card {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
         }
 
         /* Enhanced tags */
@@ -126,11 +129,11 @@
 
         /* Enhanced skill icons */
         .skill-icon {
-            @apply flex flex-col items-center text-center p-4 transition-all duration-500 hover:scale-110 w-28;
+            @apply flex flex-col items-center text-center p-6 transition-all duration-500 hover:scale-110 w-32;
         }
 
         .skill-icon .icon-container {
-            @apply h-16 w-16 mb-3 flex items-center justify-center rounded-2xl p-3 transition-all duration-300;
+            @apply h-20 w-20 mb-4 flex items-center justify-center rounded-2xl p-4 transition-all duration-300;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -143,7 +146,7 @@
         }
 
         .skill-icon span {
-            @apply text-sm text-gray-300 mt-2 font-medium;
+            @apply text-base text-gray-300 mt-3 font-semibold;
         }
 
         /* Enhanced hero section */
@@ -302,16 +305,18 @@
                 </div>
             </section>
 
-            <section id="about" class="py-20 fade-in">
+            <section id="about" class="py-40 fade-in">
                 <h2 class="section-title">About Me</h2>
-                <div class="max-w-4xl mx-auto text-center text-gray-300 text-xl leading-relaxed">
-                    <p>I am a final-year B.Tech Computer Science student at Manipal Institute of Technology (CGPA: 8.79), specializing in full-stack development and machine learning. My experience includes architecting web applications with Next.js and the MERN stack, as well as developing and deploying ML models for customer segmentation and price prediction. I am passionate about building robust, data-driven software and thrive in collaborative environments where I can tackle complex challenges.</p>
+                <div class="max-w-6xl mx-auto text-center text-gray-300 text-2xl leading-relaxed mt-20">
+                    <p class="mb-10">I am a final-year B.Tech Computer Science student at Manipal Institute of Technology (CGPA: 8.79), specializing in full-stack development and machine learning.</p>
+                    <p class="mb-10">My experience includes architecting web applications with Next.js and the MERN stack, as well as developing and deploying ML models for customer segmentation and price prediction.</p>
+                    <p>I am passionate about building robust, data-driven software and thrive in collaborative environments where I can tackle complex challenges.</p>
                 </div>
             </section>
 
-            <section id="experience" class="py-20 fade-in">
+            <section id="experience" class="py-40 fade-in">
                 <h2 class="section-title">Experience</h2>
-                <div class="max-w-4xl mx-auto flex flex-col gap-8">
+                <div class="max-w-6xl mx-auto flex flex-col gap-16 mt-20">
                     <div class="card">
                          <div class="flex items-center mb-6">
                             <img src="amantya.jpeg" alt="Amantya Technologies Logo" class="h-12 mr-6 bg-white rounded-xl p-2">
@@ -356,9 +361,9 @@
                 </div>
             </section>
 
-            <section id="projects" class="py-20 fade-in">
+            <section id="projects" class="py-40 fade-in">
                 <h2 class="section-title">Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mt-20">
                     <div class="card project-card" style="background-image: url('projects-bg.jpg');">
                         <h3 class="text-3xl font-bold text-white mb-4">VibeVerse Chat</h3>
                         <p class="text-gray-300 mb-6 text-lg">Developed a real-time group chat application using the MERN stack and Socket.IO for WebSocket communication.</p>
@@ -393,117 +398,117 @@
                 </div>
             </section>
 
-            <section id="skills" class="py-20 fade-in">
+            <section id="skills" class="py-40 fade-in">
                 <h2 class="section-title">Technical Skills</h2>
-                <div class="max-w-6xl mx-auto">
-                    <div class="mb-16">
-                        <h3 class="text-3xl font-semibold text-white mb-12 text-center">Languages</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-y-10 justify-items-center">
+                <div class="max-w-7xl mx-auto mt-20">
+                    <div class="mb-24">
+                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Languages</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-y-16 justify-items-center">
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="python-icon.png" alt="Python" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"></div>
+                                <div class="icon-container"><img src="python-icon.png" alt="Python" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Py';"></div>
                                 <span>Python</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="c++-icon.png" alt="C++" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=C++';"></div>
+                                <div class="icon-container"><img src="c++-icon.png" alt="C++" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=C++';"></div>
                                 <span>C++</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="java-icon.png" alt="Java" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Java';"></div>
+                                <div class="icon-container"><img src="java-icon.png" alt="Java" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Java';"></div>
                                 <span>Java</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="js.png" alt="JavaScript" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="js.png" alt="JavaScript" class="h-12 w-12 object-contain"></div>
                                 <span>JavaScript</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="sql-icon.png" alt="SQL" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=SQL';"></div>
+                                <div class="icon-container"><img src="sql-icon.png" alt="SQL" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=SQL';"></div>
                                 <span>SQL</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="htmlcss.jpg" alt="HTML/CSS" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="htmlcss.jpg" alt="HTML/CSS" class="h-12 w-12 object-contain"></div>
                                 <span>HTML/CSS</span>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-16">
-                        <h3 class="text-3xl font-semibold text-white mb-12 text-center">Web Development</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-10 justify-items-center">
+                    <div class="mb-24">
+                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Web Development</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-16 justify-items-center">
                                <div class="skill-icon">
-                                <div class="icon-container"><img src="react.svg" alt="React" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="react.svg" alt="React" class="h-12 w-12 object-contain"></div>
                                 <span>React</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="nextjs-icon.png" alt="Next.js" class="h-10 w-10 object-contain" style="filter: invert(1);"></div>
+                                <div class="icon-container"><img src="nextjs-icon.png" alt="Next.js" class="h-12 w-12 object-contain" style="filter: invert(1);"></div>
                                 <span>Next.js</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="node.svg" alt="Node.js" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="node.svg" alt="Node.js" class="h-12 w-12 object-contain"></div>
                                 <span>Node.js</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="express.png" alt="Express.js" class="h-10 w-10 object-contain" style="filter: invert(1);"></div>
+                                <div class="icon-container"><img src="express.png" alt="Express.js" class="h-12 w-12 object-contain" style="filter: invert(1);"></div>
                                 <span>Express.js</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="tailwind.png" alt="Tailwind CSS" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="tailwind.png" alt="Tailwind CSS" class="h-12 w-12 object-contain"></div>
                                 <span>Tailwind CSS</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="bootstrap.png" alt="Bootstrap" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="bootstrap.png" alt="Bootstrap" class="h-12 w-12 object-contain"></div>
                                 <span>Bootstrap</span>
                             </div>
                         </div>
                     </div>
-                     <div class="mb-16">
-                        <h3 class="text-3xl font-semibold text-white mb-12 text-center">Machine Learning</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-10 justify-items-center">
+                     <div class="mb-24">
+                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Machine Learning</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-y-16 justify-items-center">
                                <div class="skill-icon">
-                                <div class="icon-container"><img src="Tensor-icon.png" alt="TensorFlow" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=TF';"></div>
+                                <div class="icon-container"><img src="Tensor-icon.png" alt="TensorFlow" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=TF';"></div>
                                 <span>TensorFlow</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="scikit.png" alt="Scikit-learn" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="scikit.png" alt="Scikit-learn" class="h-12 w-12 object-contain"></div>
                                 <span>Scikit-learn</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="pandas.png" alt="Pandas" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Pa';"></div>
+                                <div class="icon-container"><img src="pandas.png" alt="Pandas" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Pa';"></div>
                                 <span>Pandas</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="num-logo.png" alt="NumPy" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Np';"></div>
+                                <div class="icon-container"><img src="num-logo.png" alt="NumPy" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Np';"></div>
                                 <span>NumPy</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="mat.png" alt="Matplotlib" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Mat';"></div>
+                                <div class="icon-container"><img src="mat.png" alt="Matplotlib" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Mat';"></div>
                                 <span>Matplotlib</span>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-semibold text-white mb-12 text-center">Databases & Tools</h3>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-10 justify-items-center">
+                        <h3 class="text-5xl font-bold text-white mb-20 text-center">Databases & Tools</h3>
+                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-y-16 justify-items-center">
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="mongodb-icon.png" alt="MongoDB" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="mongodb-icon.png" alt="MongoDB" class="h-12 w-12 object-contain"></div>
                                 <span>MongoDB</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="postgresql-icon.png" alt="PostgreSQL" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="postgresql-icon.png" alt="PostgreSQL" class="h-12 w-12 object-contain"></div>
                                 <span>PostgreSQL</span>
                             </div>
                              <div class="skill-icon">
-                                <div class="icon-container"><img src="oracle-icon.png" alt="Oracle" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="oracle-icon.png" alt="Oracle" class="h-12 w-12 object-contain"></div>
                                 <span>Oracle</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="git-icon.png" alt="Git" class="h-10 w-10 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"></div>
+                                <div class="icon-container"><img src="git-icon.png" alt="Git" class="h-12 w-12 object-contain" onerror="this.onerror=null; this.src='https://placehold.co/100x100/1F2937/FFFFFF?text=Git';"></div>
                                 <span>Git</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="docker-icon.png" alt="Docker" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="docker-icon.png" alt="Docker" class="h-12 w-12 object-contain"></div>
                                 <span>Docker</span>
                             </div>
                             <div class="skill-icon">
-                                <div class="icon-container"><img src="vs.png" alt="VS Code" class="h-10 w-10 object-contain"></div>
+                                <div class="icon-container"><img src="vs.png" alt="VS Code" class="h-12 w-12 object-contain"></div>
                                 <span>VS Code</span>
                             </div>
                         </div>
@@ -511,9 +516,9 @@
                 </div>
             </section>
 
-            <section id="achievements" class="py-20 fade-in">
+            <section id="achievements" class="py-40 fade-in">
                 <h2 class="section-title">Achievements & Leadership</h2>
-                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 mt-20">
                     <div class="card">
                         <h3 class="text-3xl font-bold text-white mb-6">Leadership & Awards</h3>
                         <ul class="list-disc list-inside text-gray-300 space-y-3 text-lg">
@@ -539,9 +544,9 @@
                 </div>
             </section>
 
-            <section id="contact" class="py-20 fade-in">
+            <section id="contact" class="py-40 fade-in">
                 <h2 class="section-title">Let's Connect</h2>
-                <div class="max-w-6xl mx-auto">
+                <div class="max-w-7xl mx-auto mt-20">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="space-y-8">
                             <div class="card">
@@ -590,24 +595,24 @@
 
                         <div class="card">
                             <h3 class="text-3xl font-bold text-white mb-6">Send a Message</h3>
-                            <form class="space-y-6">
+                            <form id="contactForm" class="space-y-6">
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     <div>
                                         <label class="block text-gray-300 text-sm font-medium mb-2">Name</label>
-                                        <input type="text" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="Your name">
+                                        <input type="text" name="name" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="Your name">
                                     </div>
                                     <div>
                                         <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
-                                        <input type="email" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="your@email.com">
+                                        <input type="email" name="email" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="your@email.com">
                                     </div>
                                 </div>
                                 <div>
                                     <label class="block text-gray-300 text-sm font-medium mb-2">Subject</label>
-                                    <input type="text" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="What's this about?">
+                                    <input type="text" name="subject" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all" placeholder="What's this about?">
                                 </div>
                                 <div>
                                     <label class="block text-gray-300 text-sm font-medium mb-2">Message</label>
-                                    <textarea rows="4" class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none" placeholder="Tell me about your project or opportunity..."></textarea>
+                                    <textarea name="message" rows="4" required class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all resize-none" placeholder="Tell me about your project or opportunity..."></textarea>
                                 </div>
                                 <button type="submit" class="w-full btn-primary text-white text-lg py-4">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -698,6 +703,32 @@
             document.querySelectorAll('.fade-in').forEach(el => {
                 observer.observe(el);
             });
+
+            // Contact form functionality
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name');
+                    const email = formData.get('email');
+                    const subject = formData.get('subject');
+                    const message = formData.get('message');
+                    
+                    // Create mailto link
+                    const mailtoLink = `mailto:kartikahluwalia2004@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                    
+                    // Open default email client
+                    window.location.href = mailtoLink;
+                    
+                    // Show success message
+                    alert('Thank you for your message! Your default email client should open with the message pre-filled.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
 
             // Enhanced particles.js configuration
             particlesJS('particles-js', {
