@@ -12,9 +12,9 @@
         /* Custom styles for the Apple-inspired look */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #121212; /* Restored background color */
+            background-color: #121212;
             color: #F5F5F7;
-            overflow-x: hidden; /* Prevent horizontal scrollbar from animation */
+            overflow-x: hidden;
         }
         .section {
             opacity: 0;
@@ -69,8 +69,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Place behind all content */
-            transform: rotate(145deg); /* Angle the stars */
+            z-index: -1;
+            transform: rotate(145deg);
         }
 
         .star {
@@ -96,7 +96,7 @@
             100% { transform: translateX(300px); }
         }
         
-        /* Stagger the animations for a natural look */
+        /* Stagger the animations */
         .star:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
         .star:nth-child(2) { top: 60%; left: 20%; animation-delay: 0.1s; }
         .star:nth-child(3) { top: 40%; left: 70%; animation-delay: 0.2s; }
@@ -110,7 +110,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Shooting Stars Container -->
     <div class="stars-container">
         <div class="star"></div>
         <div class="star"></div>
@@ -122,7 +121,6 @@
         <div class="star"></div>
     </div>
 
-    <!-- Header & Navigation -->
     <header id="header" class="glass-nav fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-tight">Kartik Ahluwalia</a>
@@ -138,20 +136,18 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
               <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
               <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
               <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
               <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
               <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
-              <a href="https://placehold.co/8.5x11/121212/f5f5f7?text=Resume.pdf" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
+              <a href="https://drive.google.com/file/d/1s5ny4Do-MTQQefh3bFbrcalAv2Mr7Xzc/view?usp=sharing" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 pt-24 md:pt-32">
 
-        <!-- Hero Section -->
         <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center section">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4">Kartik Ahluwalia</h1>
             <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-400 mb-8">Full-Stack Developer & ML Enthusiast</h2>
@@ -161,12 +157,10 @@
             </div>
         </section>
         
-        <!-- About Section -->
         <section id="about" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">About Me</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10 items-center">
                 <div class="md:col-span-1">
-                    <!-- Replace with your photo URL -->
                     <img src="new_profile.jpeg" alt="Kartik Ahluwalia" class="rounded-full mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1d1d1f/f5f5f7?text=KA';">
                 </div>
                 <div class="md:col-span-2">
@@ -177,13 +171,11 @@
             </div>
         </section>
         
-        <!-- Education Section -->
         <section id="education" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Education</h2>
             <div class="max-w-2xl mx-auto">
                 <div class="card rounded-2xl p-8 flex items-center gap-8">
                     <div class="flex-shrink-0">
-                        <!-- Replace with your university logo URL -->
                         <img src="manipal.png" alt="Manipal Institute of Technology Logo" class="h-20 w-20" onerror="this.onerror=null;this.src='https://placehold.co/80x80/ffffff/1d1d1f?text=MIT';">
                     </div>
                     <div>
@@ -195,22 +187,33 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Experience</h2>
             <div class="max-w-4xl mx-auto space-y-12 relative border-l-2 border-gray-700 pl-8">
-                <!-- Timeline Item 1 -->
+                
+                <div class="relative">
+                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
+                    <p class="text-sm text-gray-400 mb-1">Jan 2026 – Present</p>
+                    <h3 class="text-2xl font-semibold">Intern</h3>
+                    <p class="text-lg text-gray-300 mb-2">Rystad Energy</p>
+                    <ul class="list-disc list-inside text-gray-400 space-y-1">
+                        <li>Developing <strong>Scenario Manager</strong> backend using <strong>C# (.NET)</strong> with secure <strong>JWT</strong> authentication.</li>
+                        <li>Enhancing UI with <strong>PrimeNG</strong> to implement interactive tutorials and Dark Mode.</li>
+                        <li>Migrating observability from Kibana to <strong>Grafana</strong> using <strong>Python & OpenTelemetry</strong>.</li>
+                    </ul>
+                </div>
+
                 <div class="relative">
                     <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
                     <p class="text-sm text-gray-400 mb-1">Nov 2024 – Jan 2025</p>
                     <h3 class="text-2xl font-semibold">Trainee Engineer</h3>
                     <p class="text-lg text-gray-300 mb-2">Amantya Technologies</p>
                     <ul class="list-disc list-inside text-gray-400 space-y-1">
-                        <li>Architected a full-stack job board using Next.js, JavaScript, and Prisma ORM.</li>
-                        <li>Integrated NextAuth.js for secure GitHub OAuth and full CRUD functionality.</li>
+                        <li>Architected a high-performance job board using Next.js and Prisma, reducing latency by 40%.</li>
+                        <li>Implemented Role-Based Access Control (RBAC) with NextAuth.js for secure data privacy.</li>
                     </ul>
                 </div>
-                <!-- Timeline Item 2 -->
+
                 <div class="relative">
                     <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
                     <p class="text-sm text-gray-400 mb-1">June 2024 – July 2024</p>
@@ -221,24 +224,12 @@
                         <li>Integrated ML models into client personalization workflows using Python.</li>
                     </ul>
                 </div>
-                <!-- Timeline Item 3 -->
-                <div class="relative">
-                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
-                    <p class="text-sm text-gray-400 mb-1">Oct 2023 – Nov 2023</p>
-                    <h3 class="text-2xl font-semibold">WordPress Developer Intern</h3>
-                    <p class="text-lg text-gray-300 mb-2">Connect Link</p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1">
-                        <li>Enhanced site SEO and performance via optimized plugins, boosting load speed by 45%.</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Selected Projects</h2>
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Project Card 1 -->
                 <div class="card rounded-2xl p-6 flex flex-col">
                     <h3 class="text-2xl font-semibold mb-2">VibeVerse Chat</h3>
                     <p class="text-gray-400 mb-4 flex-grow">A real-time group chat application built with the MERN stack and Socket.IO for WebSocket communication.</p>
@@ -252,7 +243,6 @@
                         <a href="https://vibe-verse.onrender.com/" target="_blank" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
                     </div>
                 </div>
-                <!-- Project Card 2 -->
                 <div class="card rounded-2xl p-6 flex flex-col">
                     <h3 class="text-2xl font-semibold mb-2">Bit Predict</h3>
                     <p class="text-gray-400 mb-4 flex-grow">Engineered deep learning models (LSTM, Conv1D) with TensorFlow and Keras to predict Bitcoin prices, achieving a MAE of 615.5.</p>
@@ -265,7 +255,6 @@
                         <a href="https://colab.research.google.com/drive/1s8vgWu0daKxEY3Qa88JNZtWpsrILy3Wo?usp=sharing" target="_blank" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
                     </div>
                 </div>
-                <!-- Project Card 3 -->
                 <div class="card rounded-2xl p-6 flex flex-col">
                     <h3 class="text-2xl font-semibold mb-2">SMS Spam Detection</h3>
                     <p class="text-gray-400 mb-4 flex-grow">Benchmarked ML classifiers on 5k SMS messages, achieving 98% F1-score. Published findings at WCSE 2023.</p>
@@ -278,7 +267,6 @@
                         <a href="https://www.wcse.org/WCSE_2023/021.pdf" target="_blank" class="font-semibold text-blue-500 hover:underline">View Publication &rarr;</a>
                     </div>
                 </div>
-                <!-- Project Card 4 -->
                 <div class="card rounded-2xl p-6 flex flex-col">
                     <h3 class="text-2xl font-semibold mb-2">Twitter Sentiment Analysis</h3>
                     <p class="text-gray-400 mb-4 flex-grow">Developed a machine learning model to classify the sentiment of tweets as positive, negative, or neutral using Natural Language Processing.</p>
@@ -294,7 +282,6 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">My Tech Stack</h2>
             <div class="max-w-5xl mx-auto">
@@ -302,8 +289,8 @@
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Languages</h3>
                         <ul class="space-y-2 text-gray-400">
+                            <li>C# / .NET</li>
                             <li>Python</li>
-                            <li>C++</li>
                             <li>JavaScript</li>
                             <li>SQL</li>
                         </ul>
@@ -311,10 +298,10 @@
                     <div>
                         <h3 class="text-xl font-semibold mb-4">Web Development</h3>
                         <ul class="space-y-2 text-gray-400">
-                            <li>React / Next.js</li>
-                            <li>Node.js / Express.js</li>
+                            <li>Angular / React</li>
+                            <li>Node.js / Express</li>
+                            <li>Next.js</li>
                             <li>Tailwind CSS</li>
-                            <li>HTML/CSS</li>
                         </ul>
                     </div>
                     <div>
@@ -327,19 +314,18 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-xl font-semibold mb-4">Databases & Tools</h3>
+                        <h3 class="text-xl font-semibold mb-4">Tools</h3>
                         <ul class="space-y-2 text-gray-400">
-                            <li>MongoDB</li>
+                            <li>Grafana / OTEL</li>
+                            <li>Docker / Git</li>
+                            <li>MongoDB / SQL</li>
                             <li>PostgreSQL</li>
-                            <li>Git / Docker</li>
-                            <li>VS Code</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- Leadership Section -->
         <section id="leadership" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Leadership</h2>
             <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
@@ -361,24 +347,22 @@
             </div>
         </section>
 
-        <!-- Achievements Section -->
         <section id="achievements" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Awards & Recognition</h2>
             <div class="max-w-5xl mx-auto">
                  <ul class="list-disc list-inside text-gray-400 space-y-3 text-lg columns-1 md:columns-2">
-                     <li>Best Oral Presenter, WCSE 2023</li>
-                     <li>MassMutual India Scholarship, ISACA</li>
-                     <li>Achiever Scholarship (Top 5% of batch)</li>
-                     <li>National Semi-Finalist, TATA Imagination Challenge</li>
-                     <li>Selected as HPAIR Asia Conference Delegate</li>
-                     <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
-                     <li>Solved 300+ problems on LeetCode & GFG</li>
-                     <li>Certificate of Appreciation, HackNite Hackathon</li>
+                      <li>Best Oral Presenter, WCSE 2023</li>
+                      <li>MassMutual India Scholarship, ISACA</li>
+                      <li>Achiever Scholarship (Top 5% of batch)</li>
+                      <li>National Semi-Finalist, TATA Imagination Challenge</li>
+                      <li>Selected as HPAIR Asia Conference Delegate</li>
+                      <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
+                      <li>Solved 300+ problems on LeetCode & GFG</li>
+                      <li>Certificate of Appreciation, HackNite Hackathon</li>
                  </ul>
             </div>
         </section>
 
-        <!-- Certifications Section -->
         <section id="certifications" class="py-20 section">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Certifications</h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
@@ -399,7 +383,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer id="contact" class="pt-20 pb-10 bg-[#1D1D1F] section">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold mb-4 tracking-tight">Let's Connect</h2>
