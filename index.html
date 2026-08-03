@@ -1,470 +1,445 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZG0YSSC3MV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-ZG0YSSC3MV');
-    </script>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartik Ahluwalia | Personal Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles for the Apple-inspired look */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #121212;
-            color: #F5F5F7;
-            overflow-x: hidden;
-        }
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .glass-nav {
-            background-color: rgba(18, 18, 18, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .card {
-            background-color: #1D1D1F;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .skill-tag {
-             background-color: rgba(0, 122, 255, 0.1);
-             color: #007AFF;
-             border: 1px solid rgba(0, 122, 255, 0.2);
-        }
-        .btn-primary {
-            background-color: #007AFF;
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .btn-secondary {
-            background-color: #1D1D1F;
-            border: 1px solid #333;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        .btn-secondary:hover {
-            background-color: #2c2c2e;
-            border-color: #555;
-        }
-
-        /* --- Shooting Star Animation --- */
-        .stars-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            transform: rotate(145deg);
-        }
-
-        .star {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            height: 2px;
-            background: linear-gradient(-45deg, rgba(0, 122, 255, 1), rgba(0,0,0,0));
-            border-radius: 999px;
-            filter: drop-shadow(0 0 6px rgba(105, 155, 255, 0.5));
-            animation: tail 3s ease-in-out infinite,
-                       shooting 3s ease-in-out infinite;
-        }
-
-        @keyframes tail {
-            0% { width: 0; }
-            30% { width: 100px; }
-            100% { width: 0; }
-        }
-
-        @keyframes shooting {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(300px); }
-        }
-
-        /* Stagger the animations */
-        .star:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .star:nth-child(2) { top: 60%; left: 20%; animation-delay: 0.1s; }
-        .star:nth-child(3) { top: 40%; left: 70%; animation-delay: 0.2s; }
-        .star:nth-child(4) { top: 80%; left: 50%; animation-delay: 0.3s; }
-        .star:nth-child(5) { top: 10%; left: 90%; animation-delay: 0.4s; }
-        .star:nth-child(6) { top: 50%; left: 40%; animation-delay: 0.5s; }
-        .star:nth-child(7) { top: 70%; left: 80%; animation-delay: 0.6s; }
-        .star:nth-child(8) { top: 30%; left: 30%; animation-delay: 0.7s; }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kartik Ahluwalia — Software Engineer</title>
+<meta name="description" content="Kartik Ahluwalia — Software Engineer at Rystad Energy. Security, observability, and full-stack systems.">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="antialiased">
+<body>
 
-    <div class="stars-container">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+<header id="site-header">
+  <div class="nav-inner">
+    <a href="#" class="logo"><span class="bracket">&lt;</span>KA<span class="bracket">/&gt;</span></a>
+    <nav class="primary-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost btn-ghost-desktop">Resume</a>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+    <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener">View Resume ↗</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero container">
+    <div class="hero-status">
+      <span class="eyebrow pulse"><span class="dot"></span>Open to new opportunities</span>
+      <span class="hero-clock" id="hero-clock">BENGALURU, IN</span>
     </div>
 
-    <header id="header" class="glass-nav fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight">Kartik Ahluwalia</a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
-                <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a>
-                <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
-                <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
-                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-            </nav>
-            <a href="https://drive.google.com/file/d/1kZz_34A5wSl5gVze7wns5LJfuIsOdyWV/view?usp=sharing" target="_blank" class="hidden md:inline-block px-4 py-2 rounded-lg btn-secondary">View Resume</a>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-            </button>
+    <h1 class="hero-title">Kartik Ahluwalia</h1>
+    <p class="hero-role">Currently <span id="hero-role-text">building secure APIs.</span><span class="cursor"></span></p>
+
+    <p class="hero-desc">
+      Software Engineer at <strong>Rystad Energy</strong>, working on the security and observability
+      layer of a production scenario-modelling platform. I care about systems that stay
+      reliable under load and easy to debug when they don't — GraphQL authorization, rate
+      limiting, and telemetry pipelines that turn incidents into a single query.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
+        <span class="long">View Resume</span><span class="short">Resume</span> ↗
+      </a>
+      <a href="https://github.com/kartikahluwalia" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+    </div>
+
+    <svg class="hero-spark" viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M0,120 L40,110 L80,125 L120,90 L160,100 L200,55 L240,70 L280,35 L320,50 L360,20 L400,32 L440,10 L480,18" />
+    </svg>
+
+    <div class="ticker reveal">
+      <div class="ticker-head">
+        <span>telemetry.json</span>
+        <span class="eyebrow"><span class="dot"></span>live</span>
+      </div>
+      <div class="ticker-grid">
+        <div class="metric">
+          <div class="metric-value">30<span class="unit">+</span></div>
+          <div class="metric-label">Production tickets shipped in 6 months</div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-              <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
-              <a href="#experience" class="block py-2 text-gray-300 hover:text-white">Experience</a>
-              <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
-              <a href="#skills" class="block py-2 text-gray-300 hover:text-white">Skills</a>
-              <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
-              <a href="https://drive.google.com/file/d/1s5ny4Do-MTQQefh3bFbrcalAv2Mr7Xzc/view?usp=sharing" target="_blank" class="block mt-2 px-4 py-2 rounded-lg btn-secondary text-center">View Resume</a>
+        <div class="metric">
+          <div class="metric-value">600<span class="unit">+</span></div>
+          <div class="metric-label">Dashboards migrated IIS → Kubernetes</div>
         </div>
-    </header>
-
-    <main class="container mx-auto px-6 pt-24 md:pt-32">
-
-        <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-center text-center section">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4">Kartik Ahluwalia</h1>
-            <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-400 mb-8">Full-Stack Developer & ML Enthusiast</h2>
-            <div class="flex items-center space-x-4">
-                <a href="#contact" class="px-6 py-3 rounded-lg btn-primary font-semibold">Get in Touch</a>
-                <a href="https://github.com/kartikahluwalia" target="_blank" class="px-6 py-3 rounded-lg btn-secondary font-semibold">View GitHub</a>
-            </div>
-        </section>
-
-        <section id="about" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">About Me</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10 items-center">
-                <div class="md:col-span-1">
-                    <img src="new_profile.jpeg" alt="Kartik Ahluwalia" class="rounded-full mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1d1d1f/f5f5f7?text=KA';">
-                </div>
-                <div class="md:col-span-2">
-                    <p class="text-lg text-gray-300">
-                        A results-oriented Computer Science undergraduate with hands-on experience in full-stack web development and machine learning. Proven ability to deliver data-driven solutions and develop robust software.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Education</h2>
-            <div class="max-w-2xl mx-auto">
-                <div class="card rounded-2xl p-8 flex items-center gap-8">
-                    <div class="flex-shrink-0">
-                        <img src="manipal.png" alt="Manipal Institute of Technology Logo" class="h-20 w-20" onerror="this.onerror=null;this.src='https://placehold.co/80x80/ffffff/1d1d1f?text=MIT';">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold">Manipal Institute of Technology</h3>
-                        <p class="text-lg text-gray-300">Bachelor of Technology in Computer Science</p>
-                        <p class="text-gray-400">CGPA: 8.9 | 2022 – 2026</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Experience</h2>
-            <div class="max-w-4xl mx-auto space-y-12 relative border-l-2 border-gray-700 pl-8">
-
-                <div class="relative">
-                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
-                    <p class="text-sm text-gray-400 mb-1">Jan 2026 – Present</p>
-                    <h3 class="text-2xl font-semibold">Intern</h3>
-                    <p class="text-lg text-gray-300 mb-2">Rystad Energy</p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1">
-                        <li>Developing <strong>Scenario Manager</strong> backend using <strong>C# (.NET)</strong> with secure <strong>JWT</strong> authentication.</li>
-                        <li>Enhancing UI with <strong>PrimeNG</strong> to implement interactive tutorials and Dark Mode.</li>
-                        <li>Migrating observability from Kibana to <strong>Grafana</strong> using <strong>Python & OpenTelemetry</strong>.</li>
-                    </ul>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
-                    <p class="text-sm text-gray-400 mb-1">Nov 2024 – Jan 2025</p>
-                    <h3 class="text-2xl font-semibold">Trainee Engineer</h3>
-                    <p class="text-lg text-gray-300 mb-2">Amantya Technologies</p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1">
-                        <li>Architected a high-performance job board using Next.js and Prisma, reducing latency by 40%.</li>
-                        <li>Implemented Role-Based Access Control (RBAC) with NextAuth.js for secure data privacy.</li>
-                    </ul>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -left-[38px] top-1 h-4 w-4 rounded-full bg-blue-500"></div>
-                    <p class="text-sm text-gray-400 mb-1">June 2024 – July 2024</p>
-                    <h3 class="text-2xl font-semibold">Intern</h3>
-                    <p class="text-lg text-gray-300 mb-2">Xebia</p>
-                    <ul class="list-disc list-inside text-gray-400 space-y-1">
-                        <li>Developed customer segmentation models using Scikit-learn, improving marketing accuracy by 30%.</li>
-                        <li>Integrated ML models into client personalization workflows using Python.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Selected Projects</h2>
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="card rounded-2xl p-6 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-2">VibeVerse Chat</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">A real-time group chat application built with the MERN stack and Socket.IO for WebSocket communication.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">React</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Node.js</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">MongoDB</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Socket.IO</span>
-                    </div>
-                    <div class="mt-auto">
-                        <a href="https://vibe-verse.onrender.com/" target="_blank" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
-                    </div>
-                </div>
-                <div class="card rounded-2xl p-6 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-2">Bit Predict</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Engineered deep learning models (LSTM, Conv1D) with TensorFlow and Keras to predict Bitcoin prices, achieving a MAE of 615.5.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">TensorFlow</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Keras</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
-                    </div>
-                     <div class="mt-auto">
-                        <a href="https://colab.research.google.com/drive/1s8vgWu0daKxEY3Qa88JNZtWpsrILy3Wo?usp=sharing" target="_blank" class="font-semibold text-blue-500 hover:underline">View Project &rarr;</a>
-                    </div>
-                </div>
-                <div class="card rounded-2xl p-6 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-2">SMS Spam Detection</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Benchmarked ML classifiers on 5k SMS messages, achieving 98% F1-score. Published findings at WCSE 2023.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Scikit-learn</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">NLP</span>
-                    </div>
-                     <div class="mt-auto">
-                        <a href="https://www.wcse.org/WCSE_2023/021.pdf" target="_blank" class="font-semibold text-blue-500 hover:underline">View Publication &rarr;</a>
-                    </div>
-                </div>
-                <div class="card rounded-2xl p-6 flex flex-col">
-                    <h3 class="text-2xl font-semibold mb-2">Twitter Sentiment Analysis</h3>
-                    <p class="text-gray-400 mb-4 flex-grow">Developed a machine learning model to classify the sentiment of tweets as positive, negative, or neutral using Natural Language Processing.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Python</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">Scikit-learn</span>
-                        <span class="skill-tag text-xs font-semibold px-2 py-1 rounded-full">NLP</span>
-                    </div>
-                     <div class="mt-auto">
-                        <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" class="font-semibold text-blue-500 hover:underline">View on GitHub &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">My Tech Stack</h2>
-            <div class="max-w-5xl mx-auto">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Languages</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>C# / .NET</li>
-                            <li>Python</li>
-                            <li>JavaScript</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Web Development</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>Angular / React</li>
-                            <li>Node.js / Express</li>
-                            <li>Next.js</li>
-                            <li>Tailwind CSS</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>TensorFlow</li>
-                            <li>Scikit-learn</li>
-                            <li>Pandas / NumPy</li>
-                            <li>Matplotlib</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-4">Tools</h3>
-                        <ul class="space-y-2 text-gray-400">
-                            <li>Grafana / OTEL</li>
-                            <li>Docker / Git</li>
-                            <li>MongoDB / SQL</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="leadership" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Leadership</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-                <div class="card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">Vice Chair</h3>
-                    <p class="text-gray-400">IEEE CS Student Chapter</p>
-                    <p class="text-sm text-gray-500 mt-1">2023-2024</p>
-                </div>
-                <div class="card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">R&D Head</h3>
-                    <p class="text-gray-400">CyberSpace Club</p>
-                    <p class="text-sm text-gray-500 mt-1">2023-2024</p>
-                </div>
-                <div class="card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">Executive Member</h3>
-                    <p class="text-gray-400">ACM Chapter</p>
-                    <p class="text-sm text-gray-500 mt-1">2022-2023</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="achievements" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Awards & Recognition</h2>
-            <div class="max-w-5xl mx-auto">
-                 <ul class="list-disc list-inside text-gray-400 space-y-3 text-lg columns-1 md:columns-2">
-                      <li>Best Oral Presenter, WCSE 2023</li>
-                      <li>MassMutual India Scholarship, ISACA</li>
-                      <li>Achiever Scholarship (Top 5% of batch)</li>
-                      <li>National Semi-Finalist, TATA Imagination Challenge</li>
-                      <li>Selected as HPAIR Asia Conference Delegate</li>
-                      <li>Duke of Edinburgh Award (Gold, Silver, Bronze)</li>
-                      <li>Solved 300+ problems on LeetCode & GFG</li>
-                      <li>Certificate of Appreciation, HackNite Hackathon</li>
-                 </ul>
-            </div>
-        </section>
-
-        <section id="certifications" class="py-20 section">
-            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center tracking-tight">Certifications</h2>
-            <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/PU7F62O37HE3" target="_blank" class="block card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">Google Cybersecurity</h3>
-                    <p class="text-gray-400 text-sm">Professional Certificate</p>
-                </a>
-                <a href="https://www.credly.com/badges/5f6dff51-ecd9-4aa4-b1df-c322cf1d587e" target="_blank" class="block card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">Cisco CCNA</h3>
-                    <p class="text-gray-400 text-sm">Introduction to Networks</p>
-                </a>
-                <a href="https://drive.google.com/file/d/1ddrV4_ZO-rfXAJBWpf8FNHQq3vQnEYg7/view?usp=sharing" target="_blank" class="block card rounded-2xl p-6">
-                    <h3 class="text-xl font-semibold">PWC Launchpad</h3>
-                    <p class="text-gray-400 text-sm">Cyber Risk & Regulatory</p>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact" class="pt-20 pb-10 bg-[#1D1D1F] section">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-4 tracking-tight">Let's Connect</h2>
-            <p class="max-w-2xl mx-auto text-gray-400 mb-8">
-                I'm currently seeking new opportunities and am open to collaborations. If you have a project in mind or just want to chat, feel free to reach out.
-            </p>
-            <a href="mailto:kartikahluwalia2004@gmail.com" class="inline-block text-2xl font-semibold text-blue-500 hover:underline mb-8">
-                kartikahluwalia2004@gmail.com
-            </a>
-            <div class="flex justify-center space-x-6 mb-8">
-                <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" class="text-gray-400 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
-                <a href="https://github.com/Kartik1304" target="_blank" class="text-gray-400 hover:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
-                </a>
-                <a href="https://leetcode.com/u/Kartik1304/" target="_blank" class="text-gray-400 hover:text-white">
-                     <img src="leetcode.png" alt="LeetCode" width="24" height="24" onerror="this.onerror=null;this.src='https://placehold.co/24x24/1d1d1f/f5f5f7?text=LC';">
-                </a>
-            </div>
-            <p class="text-gray-500 text-sm">&copy; 2025 Kartik Ahluwalia. All Rights Reserved.</p>
+        <div class="metric">
+          <div class="metric-value">40<span class="unit">%</span></div>
+          <div class="metric-label">Log volume cut via OpenTelemetry</div>
         </div>
-    </footer>
+        <div class="metric">
+          <div class="metric-value">98<span class="unit">%</span></div>
+          <div class="metric-label">F1-score, published at WCSE 2023</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value">265<span class="unit">+</span></div>
+          <div class="metric-label">Installs on a shipped Chrome extension</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // JavaScript for scroll animations and mobile menu
-        document.addEventListener('DOMContentLoaded', function() {
+  <!-- ============================= ABOUT ============================= -->
+  <section id="about" class="section container">
+    <div class="section-head reveal">
+      <span class="section-index">01 · About</span>
+      <h2 class="section-title">Backend-leaning, full-stack when it counts.</h2>
+      <p class="section-sub">CS engineering graduate turned systems engineer, with a research streak that never quite left.</p>
+    </div>
 
-            // Mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+    <div class="about-grid reveal">
+      <div class="about-photo-wrap">
+        <img src="new_profile.jpeg" alt="Kartik Ahluwalia" onerror="this.onerror=null;this.src='https://placehold.co/400x400/141a21/9aa7b4?text=KA';">
+      </div>
+      <div class="about-text">
+        <p>
+          I'm a <strong>Computer Science Engineering</strong> graduate from the
+          <strong>Manipal Institute of Technology</strong> (2022–2026), currently working as a
+          Software Engineer on Rystad Energy's Global Solutions & Insights team in Bengaluru.
+          My day-to-day sits at the intersection of <strong>backend security</strong> and
+          <strong>observability</strong> — authorization, rate limiting, and the telemetry
+          that tells you when something's actually wrong before a client does.
+        </p>
+        <p>
+          Before that, I spent two years shipping across the stack: a job board with
+          role-based access at <strong>Amantya Technologies</strong>, customer segmentation
+          models at <strong>Xebia</strong>, and two published research papers on applying
+          deep learning to medical imaging and spam detection. I like problems that reward
+          precision — the kind where a wrong assumption about auth or a missing index shows
+          up in production, not in a demo.
+        </p>
+        <div class="about-now">
+          <b>$ whoami --current</b><br>
+          Junior Software Engineer @ Rystad Energy · owns security &amp; observability for Scenario Manager
+        </div>
+      </div>
+    </div>
 
-            // Intersection Observer for section animations
-            const sections = document.querySelectorAll('.section');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
+    <div class="credential-strip reveal">
+      <img src="manipal.png" alt="Manipal Institute of Technology" onerror="this.onerror=null;this.src='https://placehold.co/80x80/ffffff/141a21?text=MIT';">
+      <div>
+        <div class="cred-title">Manipal Institute of Technology</div>
+        <div class="cred-sub">B.Tech, Computer Science Engineering · CGPA 8.9/10 · 2022 – 2026</div>
+      </div>
+    </div>
+  </section>
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+  <!-- ============================= EXPERIENCE ============================= -->
+  <section id="experience" class="section container">
+    <div class="section-head reveal">
+      <span class="section-index">02 · Experience</span>
+      <h2 class="section-title">Deploy log.</h2>
+      <p class="section-sub">Four roles, most recent first — each one a step from "wrote the feature" to "own the system."</p>
+    </div>
 
-            // Smooth scroll for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+    <div class="timeline">
 
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+      <div class="log-entry reveal">
+        <div class="log-meta">
+          <span class="log-timestamp">AUG 2026 — PRESENT</span>
+          <span class="log-status">● active</span>
+        </div>
+        <h3 class="log-role">Junior Software Engineer</h3>
+        <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
+        <ul class="log-list">
+          <li>Own <strong>security</strong> and <strong>observability engineering</strong> for Scenario Manager, a client-facing scenario-modelling platform (<strong>.NET, GraphQL, Angular, Python, Kubernetes</strong>).</li>
+          <li>Driving <strong>OpenTelemetry</strong> rollout across remaining Python model services and production cutover of the Kubernetes migration.</li>
+        </ul>
+      </div>
 
-                    if (targetElement) {
-                        // Close mobile menu on click
-                        if (!mobileMenu.classList.contains('hidden')) {
-                            mobileMenu.classList.add('hidden');
-                        }
+      <div class="log-entry past reveal">
+        <div class="log-meta">
+          <span class="log-timestamp">JAN 2026 — JUL 2026</span>
+          <span class="log-status">converted → full-time</span>
+        </div>
+        <h3 class="log-role">Software Engineering Intern</h3>
+        <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
+        <ul class="log-list">
+          <li>Delivered <strong>30+ production tickets</strong> across .NET, Angular, and Python services over 6 months.</li>
+          <li>Hardened the API boundary: <strong>role-based authorization</strong> on admin GraphQL operations, <strong>sliding-window rate limiting</strong> (100 req/60s, HTTP 429), and parametrised injection-prone SQL — pinned by CI tests.</li>
+          <li>Built a centralised <strong>OpenTelemetry</strong> logging pipeline with dashboard-id correlation, cutting failed-run diagnosis from hours of manual log reading to a single query.</li>
+          <li>Shipped a full-stack log admin feature (SQL Server → REST → Angular) and a <strong>Grafana</strong> metrics dashboard.</li>
+          <li>Migrated the internal app governing <strong>600+ dashboards</strong> from IIS to <strong>Kubernetes/Helm/ArgoCD</strong> — manual deployments became Git-versioned releases with one-commit rollback.</li>
+        </ul>
+      </div>
 
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+      <div class="log-entry past reveal">
+        <div class="log-meta">
+          <span class="log-timestamp">NOV 2024 — JAN 2025</span>
+        </div>
+        <h3 class="log-role">Trainee Engineer</h3>
+        <p class="log-org">Amantya Technologies <span>· Gurgaon, India</span></p>
+        <ul class="log-list">
+          <li>Built a high-performance job board using <strong>Next.js</strong> and <strong>PostgreSQL</strong>, optimizing queries via <strong>Prisma ORM</strong> to reduce search API latency by 40%.</li>
+          <li>Implemented <strong>RBAC</strong> using NextAuth.js and GitHub OAuth, securing CRUD operations across multi-tenant user data.</li>
+        </ul>
+      </div>
+
+      <div class="log-entry past reveal">
+        <div class="log-meta">
+          <span class="log-timestamp">JUN 2024 — JUL 2024</span>
+        </div>
+        <h3 class="log-role">Machine Learning Intern</h3>
+        <p class="log-org">Xebia <span>· Gurgaon, India</span></p>
+        <ul class="log-list">
+          <li>Built customer segmentation models using <strong>Scikit-learn</strong> (K-Means) on 50k+ records, improving marketing targeting accuracy by 30%.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================= PROJECTS ============================= -->
+  <section id="projects" class="section container">
+    <div class="section-head reveal">
+      <span class="section-index">03 · Projects</span>
+      <h2 class="section-title">Selected work.</h2>
+      <p class="section-sub">Two published papers, one live app, one shipped extension, and a couple of models trained for the fun of it.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">ML Research</span>
+          <span class="project-badge">Published · NQComp 2026</span>
+        </div>
+        <h3 class="project-title">Breast Ultrasound Image Classification</h3>
+        <p class="project-desc">Ensemble model (soft-voting) combining fine-tuned EfficientNetV2 and Vision Transformers for breast cancer classification — 91.1% accuracy, 0.91 weighted F1. Presented at the NQComp 2026 conference in Bangalore.</p>
+        <div class="project-stack">
+          <span class="stack-pill">EfficientNetV2</span><span class="stack-pill">ViT</span><span class="stack-pill">Python</span>
+        </div>
+        <a href="https://doi.org/10.1109/NQComp68334.2026.11497765" target="_blank" rel="noopener" class="project-link">
+          Read the paper
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">ML Research</span>
+          <span class="project-badge">Best Oral Presenter · WCSE 2023</span>
+        </div>
+        <h3 class="project-title">SMS Spam Detection</h3>
+        <p class="project-desc">Optimized Random Forest classifier for SMS spam detection achieving a 98% F1-score. Published and presented at WCSE 2023, Singapore, winning Best Oral Presenter among international submissions.</p>
+        <div class="project-stack">
+          <span class="stack-pill">NLP</span><span class="stack-pill">Scikit-learn</span><span class="stack-pill">Python</span>
+        </div>
+        <a href="https://www.wcse.org/WCSE_2023/021.pdf" target="_blank" rel="noopener" class="project-link">
+          Read the paper
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">Full-Stack</span>
+          <span class="project-badge">Live</span>
+        </div>
+        <h3 class="project-title">VibeVerse Chat</h3>
+        <p class="project-desc">Fault-tolerant real-time communication service built with Socket.IO and Node.js, handling concurrent message streams with minimal latency. Scalable MongoDB schema for chat history and user metadata, exposed via RESTful APIs.</p>
+        <div class="project-stack">
+          <span class="stack-pill">MERN</span><span class="stack-pill">Socket.IO</span><span class="stack-pill">MongoDB</span>
+        </div>
+        <a href="https://vibe-verse.onrender.com/" target="_blank" rel="noopener" class="project-link">
+          View project
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">Chrome Extension</span>
+          <span class="project-badge">265+ installs · 5.0★</span>
+        </div>
+        <h3 class="project-title">YT Time Machine</h3>
+        <p class="project-desc">Manifest V3 extension for filtered browsing of a YouTube channel's history by year range. Custom Vercel serverless proxy secures API keys and handles server-side auth while keeping the client lightweight.</p>
+        <div class="project-stack">
+          <span class="stack-pill">Manifest V3</span><span class="stack-pill">Vercel</span><span class="stack-pill">YouTube API</span>
+        </div>
+        <a href="https://chromewebstore.google.com/detail/yt-time-machine/gpokjmbhmipjifdoigdlhbnaeonbhebg" target="_blank" rel="noopener" class="project-link">
+          Chrome Web Store
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">ML / Time Series</span>
+        </div>
+        <h3 class="project-title">Bit Predict</h3>
+        <p class="project-desc">Deep learning models (LSTM, Conv1D) built with TensorFlow and Keras to forecast Bitcoin prices, achieving a mean absolute error of 615.5 on held-out data.</p>
+        <div class="project-stack">
+          <span class="stack-pill">TensorFlow</span><span class="stack-pill">Keras</span><span class="stack-pill">Python</span>
+        </div>
+        <a href="https://colab.research.google.com/drive/1s8vgWu0daKxEY3Qa88JNZtWpsrILy3Wo?usp=sharing" target="_blank" rel="noopener" class="project-link">
+          Open notebook
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-top">
+          <span class="project-tag">NLP</span>
+        </div>
+        <h3 class="project-title">Twitter Sentiment Analysis</h3>
+        <p class="project-desc">Classifier that tags tweet sentiment as positive, negative, or neutral, built on classic NLP preprocessing and scikit-learn models.</p>
+        <div class="project-stack">
+          <span class="stack-pill">Python</span><span class="stack-pill">Scikit-learn</span><span class="stack-pill">NLP</span>
+        </div>
+        <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" rel="noopener" class="project-link">
+          View on GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================= SKILLS ============================= -->
+  <section id="skills" class="section container">
+    <div class="section-head reveal">
+      <span class="section-index">04 · Stack</span>
+      <h2 class="section-title">What I build with.</h2>
+      <p class="section-sub">Grouped the way I'd group services on an architecture diagram.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">01</span><h3>Languages</h3></div>
+        <div class="skill-tags">
+          <span>C#</span><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>SQL</span>
+        </div>
+      </div>
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">02</span><h3>Backend &amp; Web</h3></div>
+        <div class="skill-tags">
+          <span>ASP.NET</span><span>Node.js</span><span>Next.js</span><span>React</span><span>Angular</span><span>REST</span><span>GraphQL</span><span>Socket.IO</span>
+        </div>
+      </div>
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">03</span><h3>Infra &amp; Observability</h3></div>
+        <div class="skill-tags">
+          <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ArgoCD</span><span>Grafana</span><span>OpenTelemetry</span><span>Git</span>
+        </div>
+      </div>
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">04</span><h3>ML &amp; Data</h3></div>
+        <div class="skill-tags">
+          <span>EfficientNetV2</span><span>ViT</span><span>TensorFlow</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
+        </div>
+      </div>
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">05</span><h3>Databases</h3></div>
+        <div class="skill-tags">
+          <span>PostgreSQL</span><span>MongoDB</span><span>MS SQL Server</span><span>Redis</span><span>Prisma ORM</span>
+        </div>
+      </div>
+      <div class="skill-panel reveal">
+        <div class="skill-panel-head"><span class="idx">06</span><h3>Tooling</h3></div>
+        <div class="skill-tags">
+          <span>Postman</span><span>RabbitMQ</span><span>Vercel</span><span>PrimeNG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= ACHIEVEMENTS ============================= -->
+  <section id="achievements" class="section container">
+    <div class="section-head reveal">
+      <span class="section-index">05 · Record</span>
+      <h2 class="section-title">Achievements &amp; certifications.</h2>
+    </div>
+
+    <div class="achieve-grid">
+      <ul class="achieve-list reveal">
+        <li><span class="num">01</span><span><strong>400+ problems</strong> solved across LeetCode, GFG, Codeforces, CodeChef</span></li>
+        <li><span class="num">02</span><span><strong>MassMutual India Scholarship</strong> (ISACA, 2024)</span></li>
+        <li><span class="num">03</span><span><strong>MIT Achiever Scholarship</strong> — Manipal Institute of Technology</span></li>
+        <li><span class="num">04</span><span><strong>National Semi-Finalist</strong> — TATA Imagination Challenge (2024)</span></li>
+        <li><span class="num">05</span><span><strong>ICPC 2024 Contestant</strong> — Asia Chennai Preliminary Contest</span></li>
+        <li><span class="num">06</span><span><strong>HPAIR Asia Conference</strong> — Selected Delegate</span></li>
+        <li><span class="num">07</span><span><strong>Duke of Edinburgh's Award</strong> — Gold, Silver &amp; Bronze</span></li>
+        <li><span class="num">08</span><span><strong>Vice Chair</strong>, IEEE CS Student Chapter (2023–2024)</span></li>
+        <li><span class="num">09</span><span><strong>R&amp;D Head</strong>, CyberSpace Club (2023–2024)</span></li>
+        <li><span class="num">10</span><span><strong>Executive Member</strong>, ACM Student Chapter (2022–2023)</span></li>
+      </ul>
+
+      <div class="reveal">
+        <a href="https://www.coursera.org/account/accomplishments/specialization/PU7F62O37HE3" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-name">Google Cybersecurity Professional</div>
+          <div class="cert-issuer">Coursera / Google</div>
+        </a>
+        <a href="https://www.credly.com/badges/5f6dff51-ecd9-4aa4-b1df-c322cf1d587e" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-name">Cisco CCNA — Introduction to Networks</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+        </a>
+        <div class="cert-card">
+          <div class="cert-name">Stanford Code in Place</div>
+          <div class="cert-issuer">Stanford University</div>
+        </div>
+        <a href="https://drive.google.com/file/d/1ddrV4_ZO-rfXAJBWpf8FNHQq3vQnEYg7/view?usp=sharing" target="_blank" rel="noopener" class="cert-card">
+          <div class="cert-name">PWC Launchpad — Cyber Risk &amp; Regulatory</div>
+          <div class="cert-issuer">PwC</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= CONTACT / FOOTER ============================= -->
+<footer id="contact" class="contact-section">
+  <div class="container">
+    <span class="eyebrow pulse reveal" style="justify-content:center; margin-bottom: 20px;"><span class="dot"></span>Status: open to opportunities</span>
+    <h2 class="contact-title reveal">Let's build something reliable.</h2>
+    <p class="contact-sub reveal">Open to full-time roles and collaborations in backend, security, and platform engineering. The fastest way to reach me is email.</p>
+    <a href="mailto:kartikahluwalia2004@gmail.com" class="contact-email reveal">kartikahluwalia2004@gmail.com</a>
+
+    <div class="social-row reveal">
+      <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://github.com/kartikahluwalia" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+      </a>
+      <a href="https://leetcode.com/u/Kartik1304/" target="_blank" rel="noopener" aria-label="LeetCode">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2 5 11l8.5 9M9 11h11"/></svg>
+      </a>
+      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" aria-label="Resume">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<footer class="site-footer">
+  <div class="container">&copy; 2026 Kartik Ahluwalia. Built from scratch, deployed with care.</div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
