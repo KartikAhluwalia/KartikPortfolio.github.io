@@ -792,7 +792,7 @@ footer.site-footer {
   .ticker-grid { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-child(2n) { border-right: none; }
   .metric { border-bottom: 1px solid var(--border); }
-  .about-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-photo-wrap { max-width: 220px; }
   .project-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
