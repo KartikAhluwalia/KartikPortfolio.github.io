@@ -263,6 +263,11 @@ nav.primary-nav a:hover::after { width: 100%; }
   font-size: 0.95rem;
 }
 .mobile-nav a:last-of-type { border-bottom: none; }
+.mobile-nav a.mobile-resume {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 6px;
+}
 
 /* ==========================================================================
    Hero
@@ -782,7 +787,7 @@ footer.site-footer {
    Responsive
    ========================================================================== */
 @media (max-width: 900px) {
-  nav.primary-nav, .nav-cta .btn-ghost-desktop { display: none; }
+  nav.primary-nav, .nav-cta .btn-ghost-desktop, .nav-cta .btn-primary { display: none; }
   .menu-toggle { display: flex; }
   .ticker-grid { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-child(2n) { border-right: none; }
