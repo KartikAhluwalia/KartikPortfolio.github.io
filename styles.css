@@ -792,9 +792,12 @@ footer.site-footer {
   .achieve-grid { grid-template-columns: 1fr; }
 }
 
+.hero-actions .btn span.short { display: none; }
+
 @media (max-width: 560px) {
   .section { padding: 84px 0; }
   .ticker-grid { grid-template-columns: 1fr 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .hero-actions .btn span.long { display: none; }
+  .hero-actions .btn span.short { display: inline; }
 }
