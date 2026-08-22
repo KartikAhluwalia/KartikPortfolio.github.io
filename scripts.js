@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* ---- Live IST clock in hero status bar -------------------------------- */
+  /* ---- Live IST clock --------------------------------------------------- */
   var clockEl = document.getElementById('hero-clock');
   function updateClock() {
     if (!clockEl) return;
@@ -24,12 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
   updateClock();
   setInterval(updateClock, 1000);
 
-  /* ---- Rotating role line in hero ---------------------------------------- */
+  /* ---- Rotating role line ----------------------------------------------- */
   var roles = [
     'building secure APIs.',
     'shipping observability tooling.',
     'migrating workloads to Kubernetes.',
-    'hardening auth & rate limits.'
+    'hardening auth & rate limits.',
+    'tracing prod incidents to a single query.'
   ];
   var roleEl = document.getElementById('hero-role-text');
   if (roleEl) {
@@ -40,11 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(function () {
         roleEl.textContent = roles[i];
         roleEl.style.opacity = 1;
-      }, 300);
+      }, 280);
     }, 3200);
+    roleEl.style.transition = 'opacity 0.28s ease';
   }
 
-  /* ---- Scroll reveal ------------------------------------------------------ */
+  /* ---- Scroll reveal ---------------------------------------------------- */
   var revealEls = document.querySelectorAll('.reveal');
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
@@ -53,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.1 });
   revealEls.forEach(function (el) { observer.observe(el); });
 
-  /* ---- Smooth scroll for in-page anchors ---------------------------------- */
+  /* ---- Smooth scroll ---------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       var targetId = this.getAttribute('href');
@@ -69,14 +71,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ---- Header shadow on scroll --------------------------------------------- */
+  /* ---- Header border on scroll ------------------------------------------ */
   var header = document.getElementById('site-header');
   window.addEventListener('scroll', function () {
     if (window.scrollY > 12) {
-      header.style.borderBottomColor = 'var(--border-bright)';
+      header.style.borderBottomColor = '#C4B8A4';
     } else {
-      header.style.borderBottomColor = 'var(--border)';
+      header.style.borderBottomColor = '#D4C9B8';
     }
-  });
+  }, { passive: true });
 
 });
