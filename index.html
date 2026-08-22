@@ -4,26 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kartik Ahluwalia — Software Engineer</title>
-<meta name="description" content="Kartik Ahluwalia — Software Engineer at Rystad Energy. Security, observability, and full-stack systems.">
+<meta name="description" content="Kartik Ahluwalia — Junior Software Engineer at Rystad Energy. Security, observability, and full-stack systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- ── HEADER ── -->
 <header id="site-header">
   <div class="nav-inner">
-    <a href="#" class="logo"><span class="bracket">&lt;</span>KA<span class="bracket">/&gt;</span></a>
+    <a href="#" class="logo">K · A</a>
     <nav class="primary-nav">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#experience">Work</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#achievements">Record</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
-      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost btn-ghost-desktop">Resume</a>
+      <a href="https://drive.google.com/file/d/1DaHqhWcJ_BsSkSdybWHiawQMNKm5zqvw/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↗</a>
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
       <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></svg>
@@ -32,363 +36,368 @@
   </div>
   <div class="mobile-nav" id="mobile-nav">
     <a href="#about">About</a>
-    <a href="#experience">Experience</a>
+    <a href="#experience">Work</a>
     <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#achievements">Achievements</a>
+    <a href="#skills">Stack</a>
+    <a href="#achievements">Record</a>
     <a href="#contact">Contact</a>
-    <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" class="mobile-resume">View Resume ↗</a>
+    <a href="https://drive.google.com/file/d/1DaHqhWcJ_BsSkSdybWHiawQMNKm5zqvw/view?usp=sharing" target="_blank" rel="noopener" class="mobile-resume">View Resume ↗</a>
   </div>
 </header>
 
 <main>
 
-  <!-- ============================= HERO ============================= -->
-  <section class="hero container">
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="container">
+
+    <!-- coffee-ring watermark, purely decorative -->
+    <svg class="coffee-ring" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="200" cy="200" r="155" fill="none" stroke="#B87333" stroke-width="22" opacity="0.045"/>
+      <circle cx="200" cy="200" r="170" fill="none" stroke="#B87333" stroke-width="4" opacity="0.03"/>
+      <circle cx="200" cy="200" r="140" fill="none" stroke="#B87333" stroke-width="2" opacity="0.025"/>
+    </svg>
+
     <div class="hero-status">
-      <span class="eyebrow pulse"><span class="dot"></span>Open to new opportunities</span>
+      <span class="status-pill"><span class="pulse-dot"></span>Open to opportunities</span>
       <span class="hero-clock" id="hero-clock">BENGALURU, IN</span>
     </div>
 
-    <h1 class="hero-title">Kartik Ahluwalia</h1>
-    <p class="hero-role">Currently <span id="hero-role-text">building secure APIs.</span><span class="cursor"></span></p>
+    <h1 class="hero-name">
+      Kartik<br>
+      <em>Ahluwalia.</em>
+    </h1>
+
+    <div class="hero-sub-row">
+      <p class="hero-role-line">Currently <span id="hero-role-text">building secure APIs.</span><span class="blink-cursor">|</span></p>
+      <div class="hero-divider-vert"></div>
+      <p class="hero-tagline">Junior SWE · Rystad Energy · Bengaluru</p>
+    </div>
 
     <p class="hero-desc">
-      Software Engineer at <strong>Rystad Energy</strong>, working on the security and observability
-      layer of a production scenario-modelling platform. I care about systems that stay
-      reliable under load and easy to debug when they don't — GraphQL authorization, rate
-      limiting, and telemetry pipelines that turn incidents into a single query.
+      I own the <strong>security and observability layer</strong> of a production scenario-modelling platform —
+      GraphQL authorization, rate limiting, OpenTelemetry pipelines, and the Kubernetes infrastructure
+      that keeps 600+ client dashboards running. I care about systems that stay reliable under load
+      and are easy to debug when they don't.
     </p>
 
     <div class="hero-actions">
-      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
-        <span class="long">View Resume</span><span class="short">Resume</span> ↗
-      </a>
+      <a href="https://drive.google.com/file/d/1DaHqhWcJ_BsSkSdybWHiawQMNKm5zqvw/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">View Resume ↗</a>
       <a href="https://github.com/kartikahluwalia" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
       <a href="#contact" class="btn btn-ghost">Contact</a>
     </div>
 
-    <svg class="hero-spark" viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M0,120 L40,110 L80,125 L120,90 L160,100 L200,55 L240,70 L280,35 L320,50 L360,20 L400,32 L440,10 L480,18" />
-    </svg>
-
+    <!-- telemetry ticker -->
     <div class="ticker reveal">
       <div class="ticker-head">
-        <span>telemetry.json</span>
-        <span class="eyebrow"><span class="dot"></span>live</span>
+        <span class="mono-label">telemetry.log</span>
+        <span class="live-badge"><span class="pulse-dot"></span>live</span>
       </div>
       <div class="ticker-grid">
         <div class="metric">
-          <div class="metric-value">30<span class="unit">+</span></div>
-          <div class="metric-label">Production tickets shipped in 6 months</div>
+          <div class="metric-num">30<span class="unit">+</span></div>
+          <div class="metric-label">Production tickets shipped</div>
         </div>
         <div class="metric">
-          <div class="metric-value">600<span class="unit">+</span></div>
-          <div class="metric-label">Dashboards migrated IIS → Kubernetes</div>
+          <div class="metric-num">600<span class="unit">+</span></div>
+          <div class="metric-label">Dashboards migrated IIS → K8s</div>
         </div>
         <div class="metric">
-          <div class="metric-value">40<span class="unit">%</span></div>
+          <div class="metric-num">40<span class="unit">%</span></div>
           <div class="metric-label">Log volume cut via OpenTelemetry</div>
         </div>
         <div class="metric">
-          <div class="metric-value">98<span class="unit">%</span></div>
-          <div class="metric-label">F1-score, published at WCSE 2023</div>
+          <div class="metric-num">98<span class="unit">%</span></div>
+          <div class="metric-label">F1-score, WCSE 2023</div>
         </div>
         <div class="metric">
-          <div class="metric-value">265<span class="unit">+</span></div>
-          <div class="metric-label">Installs on a shipped Chrome extension</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================= ABOUT ============================= -->
-  <section id="about" class="section container">
-    <div class="section-head reveal">
-      <span class="section-index">01 · About</span>
-      <h2 class="section-title">Backend-leaning, full-stack when it counts.</h2>
-      <p class="section-sub">CS engineering graduate turned systems engineer, with a research streak that never quite left.</p>
-    </div>
-
-    <div class="about-grid reveal">
-      <div class="about-photo-wrap">
-        <img src="1000146286.jpg" alt="Kartik Ahluwalia" onerror="this.onerror=null;this.src='https://placehold.co/400x400/141a21/9aa7b4?text=KA';">
-      </div>
-      <div class="about-text">
-        <p>
-          I'm a <strong>Computer Science Engineering</strong> graduate from the
-          <strong>Manipal Institute of Technology</strong> (2022–2026), currently working as a
-          Software Engineer on Rystad Energy's Global Solutions & Insights team in Bengaluru.
-          My day-to-day sits at the intersection of <strong>backend security</strong> and
-          <strong>observability</strong> — authorization, rate limiting, and the telemetry
-          that tells you when something's actually wrong before a client does.
-        </p>
-        <p>
-          Before that, I spent two years shipping across the stack: a job board with
-          role-based access at <strong>Amantya Technologies</strong>, customer segmentation
-          models at <strong>Xebia</strong>, and two published research papers on applying
-          deep learning to medical imaging and spam detection. I like problems that reward
-          precision — the kind where a wrong assumption about auth or a missing index shows
-          up in production, not in a demo.
-        </p>
-        <div class="about-now">
-          <b>$ whoami --current</b><br>
-          Junior Software Engineer @ Rystad Energy · owns security &amp; observability for Scenario Manager
+          <div class="metric-num">265<span class="unit">+</span></div>
+          <div class="metric-label">Chrome extension installs</div>
         </div>
       </div>
     </div>
 
-    <div class="credential-strip reveal">
-      <img src="manipal.png" alt="Manipal Institute of Technology" onerror="this.onerror=null;this.src='https://placehold.co/80x80/ffffff/141a21?text=MIT';">
-      <div>
-        <div class="cred-title">Manipal Institute of Technology</div>
-        <div class="cred-sub">B.Tech, Computer Science Engineering · CGPA 8.9/10 · 2022 – 2026</div>
+  </div>
+</section>
+
+<!-- notebook rule -->
+<div class="notebook-rule"></div>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-label reveal">01 — About</div>
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <h2 class="section-title">Backend-leaning,<br><em>full-stack when it counts.</em></h2>
+        <p>
+          CS Engineering graduate from <strong>Manipal Institute of Technology</strong> (2022–2026, CGPA 8.99/10 · Top 5%),
+          currently working as a Junior Software Engineer on Rystad Energy's Global Solutions &amp; Insights team.
+        </p>
+        <p>
+          My day-to-day sits at the intersection of backend security and observability —
+          authorization, rate limiting, and the telemetry that tells you something is wrong
+          before a client does. Before Rystad, I spent two years shipping across the stack:
+          a job board at <strong>Amantya Technologies</strong>, segmentation models at <strong>Xebia</strong>,
+          and two published research papers in deep learning and NLP.
+        </p>
+        <p>
+          I like problems that reward precision — the kind where a wrong assumption about auth
+          or a missing index shows up in production, not in a demo.
+        </p>
+        <div class="terminal-block">
+          <span class="prompt">$</span> whoami --current<br>
+          <span class="output">Junior SWE @ Rystad Energy · owns security &amp; observability for Scenario Manager</span>
+        </div>
+      </div>
+      <div class="about-right reveal" style="transition-delay:.1s">
+        <div class="about-photo-card">
+          <img src="1000146286.jpg" alt="Kartik Ahluwalia" onerror="this.onerror=null;this.src='https://placehold.co/380x420/EDE7D9/4A3728?text=KA'">
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <div class="edu-name">Manipal Institute of Technology</div>
+            <div class="edu-sub">B.Tech, CSE · CGPA 8.99/10 · 2022–2026</div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= EXPERIENCE ============================= -->
-  <section id="experience" class="section container">
-    <div class="section-head reveal">
-      <span class="section-index">02 · Experience</span>
-      <h2 class="section-title">Deploy log.</h2>
-      <p class="section-sub">Four roles, most recent first — each one a step from "wrote the feature" to "own the system."</p>
-    </div>
+<div class="notebook-rule"></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label reveal">02 — Work</div>
+    <h2 class="section-title reveal">Deploy log.</h2>
+    <p class="section-sub reveal" style="transition-delay:.08s">Four roles — each one a step from "wrote the feature" to "own the system."</p>
 
     <div class="timeline">
 
       <div class="log-entry reveal">
-        <div class="log-meta">
-          <span class="log-timestamp">AUG 2026 — PRESENT</span>
-          <span class="log-status">● active</span>
+        <div class="log-dot active"></div>
+        <div class="log-body">
+          <div class="log-meta">
+            <span class="log-date">AUG 2026 — PRESENT</span>
+            <span class="log-badge active">● active</span>
+          </div>
+          <h3 class="log-role">Junior Software Engineer</h3>
+          <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
+          <ul class="log-list">
+            <li>Own <strong>security</strong> and <strong>observability engineering</strong> for Scenario Manager, a client-facing scenario-modelling platform on <strong>.NET, GraphQL, Angular, Python, Kubernetes</strong>.</li>
+            <li>Driving <strong>OpenTelemetry</strong> rollout across remaining Python model services; leading production cutover of the Kubernetes migration.</li>
+            <li>Diagnosed an <strong>AKS</strong>-to-on-prem network block for the DynamiX API; traced root cause to a hardcoded URL in a shared package, designed a <strong>ConfigMap-per-cluster</strong> solution across the dashboard handler template and all downstream repos.</li>
+          </ul>
         </div>
-        <h3 class="log-role">Junior Software Engineer</h3>
-        <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
-        <ul class="log-list">
-          <li>Own <strong>security</strong> and <strong>observability engineering</strong> for Scenario Manager, a client-facing scenario-modelling platform (<strong>.NET, GraphQL, Angular, Python, Kubernetes</strong>).</li>
-          <li>Driving <strong>OpenTelemetry</strong> rollout across remaining Python model services and production cutover of the Kubernetes migration.</li>
-        </ul>
       </div>
 
-      <div class="log-entry past reveal">
-        <div class="log-meta">
-          <span class="log-timestamp">JAN 2026 — JUL 2026</span>
-          <span class="log-status">converted → full-time</span>
+      <div class="log-entry reveal" style="transition-delay:.08s">
+        <div class="log-dot"></div>
+        <div class="log-body">
+          <div class="log-meta">
+            <span class="log-date">JAN 2026 — JUL 2026</span>
+            <span class="log-badge converted">converted → full-time</span>
+          </div>
+          <h3 class="log-role">Software Engineering Intern</h3>
+          <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
+          <ul class="log-list">
+            <li>Delivered <strong>30+ production tickets</strong> across .NET, Angular, and Python services over 6 months.</li>
+            <li>Hardened the API boundary: <strong>role-based authorization</strong> on admin GraphQL operations, <strong>sliding-window rate limiting</strong> (100 req/60s, HTTP 429), and parametrised injection-prone SQL — pinned by CI tests.</li>
+            <li>Built a centralised <strong>OpenTelemetry</strong> logging pipeline with dashboard-id correlation, cutting failed-run diagnosis from hours of manual log trawling to a single Grafana query.</li>
+            <li>Shipped a full-stack log admin feature (SQL Server → REST → Angular) and a <strong>Grafana</strong> metrics dashboard.</li>
+            <li>Migrated the app governing <strong>600+ dashboards</strong> from IIS to <strong>Kubernetes/Helm/ArgoCD</strong> — manual deployments became Git-versioned releases with one-commit rollback.</li>
+          </ul>
         </div>
-        <h3 class="log-role">Software Engineering Intern</h3>
-        <p class="log-org">Rystad Energy <span>· Bengaluru, India</span></p>
-        <ul class="log-list">
-          <li>Delivered <strong>30+ production tickets</strong> across .NET, Angular, and Python services over 6 months.</li>
-          <li>Hardened the API boundary: <strong>role-based authorization</strong> on admin GraphQL operations, <strong>sliding-window rate limiting</strong> (100 req/60s, HTTP 429), and parametrised injection-prone SQL — pinned by CI tests.</li>
-          <li>Built a centralised <strong>OpenTelemetry</strong> logging pipeline with dashboard-id correlation, cutting failed-run diagnosis from hours of manual log reading to a single query.</li>
-          <li>Shipped a full-stack log admin feature (SQL Server → REST → Angular) and a <strong>Grafana</strong> metrics dashboard.</li>
-          <li>Migrated the internal app governing <strong>600+ dashboards</strong> from IIS to <strong>Kubernetes/Helm/ArgoCD</strong> — manual deployments became Git-versioned releases with one-commit rollback.</li>
-        </ul>
       </div>
 
-      <div class="log-entry past reveal">
-        <div class="log-meta">
-          <span class="log-timestamp">NOV 2024 — JAN 2025</span>
+      <div class="log-entry reveal" style="transition-delay:.14s">
+        <div class="log-dot"></div>
+        <div class="log-body">
+          <div class="log-meta">
+            <span class="log-date">NOV 2024 — JAN 2025</span>
+          </div>
+          <h3 class="log-role">Trainee Engineer</h3>
+          <p class="log-org">Amantya Technologies <span>· Gurgaon, India</span></p>
+          <ul class="log-list">
+            <li>Built a high-performance job board using <strong>Next.js</strong> and <strong>PostgreSQL</strong>, optimizing queries via Prisma ORM to reduce search API latency by 40%.</li>
+            <li>Implemented <strong>RBAC</strong> using NextAuth.js and GitHub OAuth across multi-tenant user data.</li>
+          </ul>
         </div>
-        <h3 class="log-role">Trainee Engineer</h3>
-        <p class="log-org">Amantya Technologies <span>· Gurgaon, India</span></p>
-        <ul class="log-list">
-          <li>Built a high-performance job board using <strong>Next.js</strong> and <strong>PostgreSQL</strong>, optimizing queries via <strong>Prisma ORM</strong> to reduce search API latency by 40%.</li>
-          <li>Implemented <strong>RBAC</strong> using NextAuth.js and GitHub OAuth, securing CRUD operations across multi-tenant user data.</li>
-        </ul>
       </div>
 
-      <div class="log-entry past reveal">
-        <div class="log-meta">
-          <span class="log-timestamp">JUN 2024 — JUL 2024</span>
+      <div class="log-entry reveal" style="transition-delay:.18s">
+        <div class="log-dot"></div>
+        <div class="log-body">
+          <div class="log-meta">
+            <span class="log-date">JUN 2024 — JUL 2024</span>
+          </div>
+          <h3 class="log-role">Machine Learning Intern</h3>
+          <p class="log-org">Xebia <span>· Gurgaon, India</span></p>
+          <ul class="log-list">
+            <li>Built customer segmentation models (K-Means) on 50k+ records, improving marketing targeting accuracy by 30%.</li>
+          </ul>
         </div>
-        <h3 class="log-role">Machine Learning Intern</h3>
-        <p class="log-org">Xebia <span>· Gurgaon, India</span></p>
-        <ul class="log-list">
-          <li>Built customer segmentation models using <strong>Scikit-learn</strong> (K-Means) on 50k+ records, improving marketing targeting accuracy by 30%.</li>
-        </ul>
       </div>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= PROJECTS ============================= -->
-  <section id="projects" class="section container">
-    <div class="section-head reveal">
-      <span class="section-index">03 · Projects</span>
-      <h2 class="section-title">Selected work.</h2>
-      <p class="section-sub">Two published papers, one live app, one shipped extension, and a couple of models trained for the fun of it.</p>
-    </div>
+<div class="notebook-rule"></div>
+
+<!-- ── PROJECTS ── -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-label reveal">03 — Projects</div>
+    <h2 class="section-title reveal">Selected work.</h2>
+    <p class="section-sub reveal" style="transition-delay:.08s">Two published papers, two live products, and a couple of models trained for the craft of it.</p>
 
     <div class="project-grid">
 
-      <div class="project-card reveal">
+      <a href="https://doi.org/10.1109/NQComp68334.2026.11497765" target="_blank" rel="noopener" class="project-card reveal">
         <div class="project-top">
-          <span class="project-tag">ML Research</span>
-          <span class="project-badge">Published · NQComp 2026</span>
+          <span class="proj-tag">ML Research</span>
+          <span class="proj-badge">Published · NQComp 2026</span>
         </div>
-        <h3 class="project-title">Breast Ultrasound Image Classification</h3>
-        <p class="project-desc">Ensemble model (soft-voting) combining fine-tuned EfficientNetV2 and Vision Transformers for breast cancer classification — 91.1% accuracy, 0.91 weighted F1. Presented at the NQComp 2026 conference in Bangalore.</p>
-        <div class="project-stack">
-          <span class="stack-pill">EfficientNetV2</span><span class="stack-pill">ViT</span><span class="stack-pill">Python</span>
+        <h3 class="proj-title">Breast Ultrasound Image Classification</h3>
+        <p class="proj-desc">Ensemble model combining fine-tuned EfficientNetV2 and Vision Transformers for breast cancer detection — 91.1% accuracy, 0.91 weighted F1. Speckle noise reduction pipeline, presented in Bangalore.</p>
+        <div class="proj-stack">
+          <span>EfficientNetV2</span><span>ViT</span><span>Python</span><span>Transfer Learning</span>
         </div>
-        <a href="https://doi.org/10.1109/NQComp68334.2026.11497765" target="_blank" rel="noopener" class="project-link">
-          Read the paper
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">Read the paper <span>↗</span></div>
+      </a>
 
-      <div class="project-card reveal">
+      <a href="https://www.wcse.org/WCSE_2023/021.pdf" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.06s">
         <div class="project-top">
-          <span class="project-tag">ML Research</span>
-          <span class="project-badge">Best Oral Presenter · WCSE 2023</span>
+          <span class="proj-tag">ML Research</span>
+          <span class="proj-badge">Best Oral Presenter · WCSE 2023</span>
         </div>
-        <h3 class="project-title">SMS Spam Detection</h3>
-        <p class="project-desc">Optimized Random Forest classifier for SMS spam detection achieving a 98% F1-score. Published and presented at WCSE 2023, Singapore, winning Best Oral Presenter among international submissions.</p>
-        <div class="project-stack">
-          <span class="stack-pill">NLP</span><span class="stack-pill">Scikit-learn</span><span class="stack-pill">Python</span>
+        <h3 class="proj-title">SMS Spam Detection</h3>
+        <p class="proj-desc">Optimized Random Forest classifier achieving 98% F1-score. Published and presented at WCSE 2023, Singapore — Best Oral Presenter among international submissions.</p>
+        <div class="proj-stack">
+          <span>NLP</span><span>Scikit-learn</span><span>Python</span>
         </div>
-        <a href="https://www.wcse.org/WCSE_2023/021.pdf" target="_blank" rel="noopener" class="project-link">
-          Read the paper
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">Read the paper <span>↗</span></div>
+      </a>
 
-      <div class="project-card reveal">
+      <a href="https://chromewebstore.google.com/detail/yt-time-machine/gpokjmbhmipjifdoigdlhbnaeonbhebg" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.1s">
         <div class="project-top">
-          <span class="project-tag">Full-Stack</span>
-          <span class="project-badge">Live</span>
+          <span class="proj-tag">Chrome Extension</span>
+          <span class="proj-badge">265+ installs · 5.0★</span>
         </div>
-        <h3 class="project-title">VibeVerse Chat</h3>
-        <p class="project-desc">Fault-tolerant real-time communication service built with Socket.IO and Node.js, handling concurrent message streams with minimal latency. Scalable MongoDB schema for chat history and user metadata, exposed via RESTful APIs.</p>
-        <div class="project-stack">
-          <span class="stack-pill">MERN</span><span class="stack-pill">Socket.IO</span><span class="stack-pill">MongoDB</span>
+        <h3 class="proj-title">YT Time Machine</h3>
+        <p class="proj-desc">Manifest V3 extension for browsing a YouTube channel's history by year range. Custom Vercel serverless proxy secures API keys and handles server-side auth while keeping the client lightweight.</p>
+        <div class="proj-stack">
+          <span>Manifest V3</span><span>Vercel</span><span>YouTube API</span>
         </div>
-        <a href="https://vibe-verse.onrender.com/" target="_blank" rel="noopener" class="project-link">
-          View project
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">Chrome Web Store <span>↗</span></div>
+      </a>
 
-      <div class="project-card reveal">
+      <a href="https://vibe-verse.onrender.com/" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.14s">
         <div class="project-top">
-          <span class="project-tag">Chrome Extension</span>
-          <span class="project-badge">265+ installs · 5.0★</span>
+          <span class="proj-tag">Full-Stack</span>
+          <span class="proj-badge">Live</span>
         </div>
-        <h3 class="project-title">YT Time Machine</h3>
-        <p class="project-desc">Manifest V3 extension for filtered browsing of a YouTube channel's history by year range. Custom Vercel serverless proxy secures API keys and handles server-side auth while keeping the client lightweight.</p>
-        <div class="project-stack">
-          <span class="stack-pill">Manifest V3</span><span class="stack-pill">Vercel</span><span class="stack-pill">YouTube API</span>
+        <h3 class="proj-title">VibeVerse Chat</h3>
+        <p class="proj-desc">Fault-tolerant real-time chat service built with Socket.IO and Node.js. Scalable MongoDB schema for chat history and user metadata, exposed via RESTful APIs.</p>
+        <div class="proj-stack">
+          <span>MERN</span><span>Socket.IO</span><span>MongoDB</span>
         </div>
-        <a href="https://chromewebstore.google.com/detail/yt-time-machine/gpokjmbhmipjifdoigdlhbnaeonbhebg" target="_blank" rel="noopener" class="project-link">
-          Chrome Web Store
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">View project <span>↗</span></div>
+      </a>
 
-      <div class="project-card reveal">
+      <a href="https://colab.research.google.com/drive/1s8vgWu0daKxEY3Qa88JNZtWpsrILy3Wo?usp=sharing" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.18s">
         <div class="project-top">
-          <span class="project-tag">ML / Time Series</span>
+          <span class="proj-tag">ML · Time Series</span>
         </div>
-        <h3 class="project-title">Bit Predict</h3>
-        <p class="project-desc">Deep learning models (LSTM, Conv1D) built with TensorFlow and Keras to forecast Bitcoin prices, achieving a mean absolute error of 615.5 on held-out data.</p>
-        <div class="project-stack">
-          <span class="stack-pill">TensorFlow</span><span class="stack-pill">Keras</span><span class="stack-pill">Python</span>
+        <h3 class="proj-title">Bit Predict</h3>
+        <p class="proj-desc">Deep learning models (LSTM, Conv1D) built with TensorFlow and Keras to forecast Bitcoin prices, achieving a mean absolute error of 615.5 on held-out data.</p>
+        <div class="proj-stack">
+          <span>TensorFlow</span><span>Keras</span><span>Python</span>
         </div>
-        <a href="https://colab.research.google.com/drive/1s8vgWu0daKxEY3Qa88JNZtWpsrILy3Wo?usp=sharing" target="_blank" rel="noopener" class="project-link">
-          Open notebook
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">Open notebook <span>↗</span></div>
+      </a>
 
-      <div class="project-card reveal">
+      <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" rel="noopener" class="project-card reveal" style="transition-delay:.22s">
         <div class="project-top">
-          <span class="project-tag">NLP</span>
+          <span class="proj-tag">NLP</span>
         </div>
-        <h3 class="project-title">Twitter Sentiment Analysis</h3>
-        <p class="project-desc">Classifier that tags tweet sentiment as positive, negative, or neutral, built on classic NLP preprocessing and scikit-learn models.</p>
-        <div class="project-stack">
-          <span class="stack-pill">Python</span><span class="stack-pill">Scikit-learn</span><span class="stack-pill">NLP</span>
+        <h3 class="proj-title">Twitter Sentiment Analysis</h3>
+        <p class="proj-desc">Classifier tagging tweet sentiment as positive, negative, or neutral — built on classic NLP preprocessing and scikit-learn models.</p>
+        <div class="proj-stack">
+          <span>Python</span><span>Scikit-learn</span><span>NLP</span>
         </div>
-        <a href="https://github.com/KartikAhluwalia/Twitter-Sentiment-Analysis" target="_blank" rel="noopener" class="project-link">
-          View on GitHub
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
-        </a>
-      </div>
+        <div class="proj-link">View on GitHub <span>↗</span></div>
+      </a>
 
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= SKILLS ============================= -->
-  <section id="skills" class="section container">
-    <div class="section-head reveal">
-      <span class="section-index">04 · Stack</span>
-      <h2 class="section-title">What I build with.</h2>
-      <p class="section-sub">Grouped the way I'd group services on an architecture diagram.</p>
-    </div>
+<div class="notebook-rule"></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-label reveal">04 — Stack</div>
+    <h2 class="section-title reveal">What I build with.</h2>
+    <p class="section-sub reveal" style="transition-delay:.08s">Grouped the way I'd group services on an architecture diagram.</p>
 
     <div class="skills-grid">
       <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">01</span><h3>Languages</h3></div>
-        <div class="skill-tags">
-          <span>C#</span><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>SQL</span>
-        </div>
+        <div class="skill-panel-head"><span class="sk-num">01</span><h3>Languages</h3></div>
+        <div class="skill-tags"><span>C#</span><span>Python</span><span>Java</span><span>C++</span><span>JavaScript</span><span>SQL</span></div>
       </div>
-      <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">02</span><h3>Backend &amp; Web</h3></div>
-        <div class="skill-tags">
-          <span>ASP.NET</span><span>Node.js</span><span>Next.js</span><span>React</span><span>Angular</span><span>REST</span><span>GraphQL</span><span>Socket.IO</span>
-        </div>
+      <div class="skill-panel reveal" style="transition-delay:.06s">
+        <div class="skill-panel-head"><span class="sk-num">02</span><h3>Backend &amp; Web</h3></div>
+        <div class="skill-tags"><span>ASP.NET</span><span>Node.js</span><span>Next.js</span><span>React</span><span>Angular</span><span>REST</span><span>GraphQL</span><span>Socket.IO</span></div>
       </div>
-      <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">03</span><h3>Infra &amp; Observability</h3></div>
-        <div class="skill-tags">
-          <span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ArgoCD</span><span>Grafana</span><span>OpenTelemetry</span><span>Git</span>
-        </div>
+      <div class="skill-panel reveal" style="transition-delay:.1s">
+        <div class="skill-panel-head"><span class="sk-num">03</span><h3>Infra &amp; Observability</h3></div>
+        <div class="skill-tags"><span>Docker</span><span>Kubernetes</span><span>Helm</span><span>ArgoCD</span><span>Grafana</span><span>OpenTelemetry</span><span>Git</span></div>
       </div>
-      <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">04</span><h3>ML &amp; Data</h3></div>
-        <div class="skill-tags">
-          <span>EfficientNetV2</span><span>ViT</span><span>TensorFlow</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span>
-        </div>
+      <div class="skill-panel reveal" style="transition-delay:.14s">
+        <div class="skill-panel-head"><span class="sk-num">04</span><h3>ML &amp; Data</h3></div>
+        <div class="skill-tags"><span>EfficientNetV2</span><span>ViT</span><span>TensorFlow</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span></div>
       </div>
-      <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">05</span><h3>Databases</h3></div>
-        <div class="skill-tags">
-          <span>PostgreSQL</span><span>MongoDB</span><span>MS SQL Server</span><span>Redis</span><span>Prisma ORM</span>
-        </div>
+      <div class="skill-panel reveal" style="transition-delay:.18s">
+        <div class="skill-panel-head"><span class="sk-num">05</span><h3>Databases</h3></div>
+        <div class="skill-tags"><span>PostgreSQL</span><span>MongoDB</span><span>MS SQL Server</span><span>Redis</span><span>Prisma ORM</span></div>
       </div>
-      <div class="skill-panel reveal">
-        <div class="skill-panel-head"><span class="idx">06</span><h3>Tooling</h3></div>
-        <div class="skill-tags">
-          <span>Postman</span><span>RabbitMQ</span><span>Vercel</span><span>PrimeNG</span>
-        </div>
+      <div class="skill-panel reveal" style="transition-delay:.22s">
+        <div class="skill-panel-head"><span class="sk-num">06</span><h3>Tooling</h3></div>
+        <div class="skill-tags"><span>Postman</span><span>RabbitMQ</span><span>Vercel</span><span>PrimeNG</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============================= ACHIEVEMENTS ============================= -->
-  <section id="achievements" class="section container">
-    <div class="section-head reveal">
-      <span class="section-index">05 · Record</span>
-      <h2 class="section-title">Achievements &amp; certifications.</h2>
-    </div>
+<div class="notebook-rule"></div>
 
-    <div class="achieve-grid">
+<!-- ── ACHIEVEMENTS ── -->
+<section id="achievements" class="section">
+  <div class="container">
+    <div class="section-label reveal">05 — Record</div>
+    <h2 class="section-title reveal">Achievements &amp; certifications.</h2>
+
+    <div class="achieve-layout">
       <ul class="achieve-list reveal">
-        <li><span class="num">01</span><span><strong>400+ problems</strong> solved across LeetCode, GFG, Codeforces, CodeChef</span></li>
-        <li><span class="num">02</span><span><strong>MassMutual India Scholarship</strong> (ISACA, 2024)</span></li>
-        <li><span class="num">03</span><span><strong>MIT Achiever Scholarship</strong> — Manipal Institute of Technology</span></li>
-        <li><span class="num">04</span><span><strong>National Semi-Finalist</strong> — TATA Imagination Challenge (2024)</span></li>
-        <li><span class="num">05</span><span><strong>ICPC 2024 Contestant</strong> — Asia Chennai Preliminary Contest</span></li>
-        <li><span class="num">06</span><span><strong>HPAIR Asia Conference</strong> — Selected Delegate</span></li>
-        <li><span class="num">07</span><span><strong>Duke of Edinburgh's Award</strong> — Gold, Silver &amp; Bronze</span></li>
-        <li><span class="num">08</span><span><strong>Vice Chair</strong>, IEEE CS Student Chapter (2023–2024)</span></li>
-        <li><span class="num">09</span><span><strong>R&amp;D Head</strong>, CyberSpace Club (2023–2024)</span></li>
-        <li><span class="num">10</span><span><strong>Executive Member</strong>, ACM Student Chapter (2022–2023)</span></li>
+        <li><span class="ach-num">01</span><span><strong>500+ problems</strong> solved across LeetCode, GFG, Codeforces, CodeChef</span></li>
+        <li><span class="ach-num">02</span><span><strong>ICPC 2024 Contestant</strong> — Asia Chennai Preliminary Contest</span></li>
+        <li><span class="ach-num">03</span><span><strong>MassMutual India Scholarship</strong> (ISACA, 2024)</span></li>
+        <li><span class="ach-num">04</span><span><strong>MIT Achiever Scholarship</strong> — Top 5% of batch</span></li>
+        <li><span class="ach-num">05</span><span><strong>National Semi-Finalist</strong> — TATA Imagination Challenge (2024)</span></li>
+        <li><span class="ach-num">06</span><span><strong>HPAIR Asia Conference</strong> — Selected Delegate</span></li>
+        <li><span class="ach-num">07</span><span><strong>Duke of Edinburgh's Award</strong> — Gold, Silver &amp; Bronze</span></li>
+        <li><span class="ach-num">08</span><span><strong>Vice Chair</strong>, IEEE CS Student Chapter (2023–2024)</span></li>
+        <li><span class="ach-num">09</span><span><strong>R&amp;D Head</strong>, CyberSpace Club (2023–2024)</span></li>
+        <li><span class="ach-num">10</span><span><strong>Executive Member</strong>, ACM Student Chapter (2022–2023)</span></li>
       </ul>
 
-      <div class="reveal">
+      <div class="certs reveal" style="transition-delay:.1s">
         <a href="https://www.coursera.org/account/accomplishments/specialization/PU7F62O37HE3" target="_blank" rel="noopener" class="cert-card">
           <div class="cert-name">Google Cybersecurity Professional</div>
           <div class="cert-issuer">Coursera / Google</div>
@@ -407,38 +416,41 @@
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<!-- ============================= CONTACT / FOOTER ============================= -->
+<!-- ── CONTACT / FOOTER ── -->
 <footer id="contact" class="contact-section">
   <div class="container">
-    <span class="eyebrow pulse reveal" style="justify-content:center; margin-bottom: 20px;"><span class="dot"></span>Status: open to opportunities</span>
-    <h2 class="contact-title reveal">Let's build something reliable.</h2>
-    <p class="contact-sub reveal">Open to full-time roles and collaborations in backend, security, and platform engineering. The fastest way to reach me is email.</p>
-    <a href="mailto:kartikahluwalia2004@gmail.com" class="contact-email reveal">kartikahluwalia2004@gmail.com</a>
+    <div class="contact-inner">
+      <span class="status-pill reveal" style="margin-bottom:24px;display:inline-flex"><span class="pulse-dot"></span>Open to opportunities</span>
+      <h2 class="contact-title reveal">Let's build something<br><em>reliable.</em></h2>
+      <p class="contact-sub reveal" style="transition-delay:.08s">Open to full-time roles in backend, security, and platform engineering. The fastest way to reach me is email.</p>
+      <a href="mailto:kartikahluwalia2004@gmail.com" class="contact-email reveal" style="transition-delay:.12s">kartikahluwalia2004@gmail.com</a>
 
-    <div class="social-row reveal">
-      <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://github.com/kartikahluwalia" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
-      </a>
-      <a href="https://leetcode.com/u/Kartik1304/" target="_blank" rel="noopener" aria-label="LeetCode">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2 5 11l8.5 9M9 11h11"/></svg>
-      </a>
-      <a href="https://drive.google.com/file/d/14bMVSFOpC-dka2x1L9zEVcX1VKMSt-kW/view?usp=sharing" target="_blank" rel="noopener" aria-label="Resume">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
-      </a>
+      <div class="social-row reveal" style="transition-delay:.16s">
+        <a href="https://linkedin.com/in/kartikahluwalia2004" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/kartikahluwalia" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+        </a>
+        <a href="https://leetcode.com/u/Kartik1304/" target="_blank" rel="noopener" aria-label="LeetCode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 2 5 11l8.5 9M9 11h11"/></svg>
+        </a>
+        <a href="https://drive.google.com/file/d/1DaHqhWcJ_BsSkSdybWHiawQMNKm5zqvw/view?usp=sharing" target="_blank" rel="noopener" aria-label="Resume">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
 
-<footer class="site-footer">
-  <div class="container">&copy; 2026 Kartik Ahluwalia. Built from scratch, deployed with care.</div>
-</footer>
+<div class="site-footer-bar">
+  <div class="container">© 2026 Kartik Ahluwalia · Built from scratch, deployed with care.</div>
+</div>
 
 <script src="scripts.js"></script>
 </body>
